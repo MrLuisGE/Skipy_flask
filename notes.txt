@@ -1,0 +1,16 @@
+# Replace these with your actual WooCommerce API details
+WC_API_URL = 'https://qjump.local/wp-json/wc/v3/'
+CONSUMER_KEY = 'ck_acf32580377d9aba65183c62db60c892d3fce299'
+CONSUMER_SECRET = 'cs_fa87b25680d3259b672f89a394b6e9f3be081bf3'
+
+# SKU prefix to shop name mapping
+sku_prefix_name_mapping = {
+    'snack-': 'Snack',
+    'restaurantealvo-': 'Restaurante Alvo',
+    'brasserie-': 'Brasserie',
+    'pub-': 'Pub',
+    'eventossociais-': 'Eventos Sociais',
+    'pizzaria-': 'Pizzaria',
+    'lionfoodmarket-': 'Lion Food Market',
+    'eventoesportivo-': 'Evento Esportivo',
+}
