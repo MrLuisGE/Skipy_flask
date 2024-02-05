@@ -3,6 +3,8 @@ WC_API_URL = 'https://qjump.local/wp-json/wc/v3/'
 CONSUMER_KEY = 'ck_acf32580377d9aba65183c62db60c892d3fce299'
 CONSUMER_SECRET = 'cs_fa87b25680d3259b672f89a394b6e9f3be081bf3'
 
+cred = credentials.Certificate("C:/Users/W-Tech It Solutions/Downloads/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
+
 # SKU prefix to shop name mapping
 sku_prefix_name_mapping = {
     'snack-': 'Snack',

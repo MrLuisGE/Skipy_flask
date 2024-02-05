@@ -3,15 +3,27 @@ from flask_cors import CORS
 import requests
 from requests.auth import HTTPBasicAuth
 from flask_caching import Cache
+import firebase_admin
+from firebase_admin import credentials, messaging
+from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Enable CORS for all routes and origins
+socketio = SocketIO(app, cors_allowed_origins="*")
+
+# Configure cache
 cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT': 300})
 
-WC_API_URL = 'https://qjump.local/wp-json/wc/v3/orders'
-WC_CONSUMER_KEY = 'ck_acf32580377d9aba65183c62db60c892d3fce299'
-WC_CONSUMER_SECRET = 'cs_fa87b25680d3259b672f89a394b6e9f3be081bf3'
+# Initialize Firebase Admin
+cred = credentials.Certificate("C:/Users/W-Tech It Solutions/Downloads/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
+firebase_admin.initialize_app(cred)
 
+# WooCommerce API details
+WC_API_URL = 'https://qjump.local/wp-json/wc/v3/'
+CONSUMER_KEY = 'ck_acf32580377d9aba65183c62db60c892d3fce299'
+CONSUMER_SECRET = 'cs_fa87b25680d3259b672f89a394b6e9f3be081bf3'
+
+# SKU prefix to shop name mapping
 sku_prefix_name_mapping = {
     'snack-': 'Snack',
     'restaurantealvo-': 'Restaurante Alvo',
@@ -21,67 +33,88 @@ sku_prefix_name_mapping = {
     'pizzaria-': 'Pizzaria',
     'lionfoodmarket-': 'Lion Food Market',
     'eventoesportivo-': 'Evento Esportivo',
-    # Add more SKU prefixes and names as needed
 }
 
-def make_cache_key(*args, **kwargs):
-    """Dynamic cache key function."""
-    path = request.path
-    args_str = '&'.join([f"{key}={value}" for key, value in request.args.items()])
-    return f"{path}?{args_str}"
+
+@app.route('/')
+def home():
+    return jsonify({'message': 'Flask WebSocket server running'})
 
 @app.route('/latest-orders', methods=['GET'])
-@cache.cached(timeout=50, key_prefix=make_cache_key)
+@cache.cached(timeout=50)
 def get_latest_orders():
     params = {
         'per_page': 50,
         'order': 'desc',
         'orderby': 'date'
     }
-    response = requests.get(WC_API_URL, params=params, auth=HTTPBasicAuth(WC_CONSUMER_KEY, WC_CONSUMER_SECRET), verify=False)
+    response = requests.get(WC_API_URL + "orders", params=params, auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
     if response.ok:
         orders = response.json()
-        simplified_orders = []
+        simplified_orders = []  # Initialize the list to hold simplified orders data
+
+        # Process each order and add to simplified_orders
         for order in orders:
-            # Default shop name if no items or SKUs match
-            shop_name = 'Unknown Shop'
+            shop_name = 'Unknown Shop'  # Default shop name
+            # Attempt to determine shop name based on SKU prefix
             for item in order.get('line_items', []):
                 sku = item.get('sku', '')
-                # Find the shop name based on the SKU prefix
                 for prefix, name in sku_prefix_name_mapping.items():
                     if sku.startswith(prefix):
                         shop_name = name
-                        break  # Found the shop name, no need to continue checking
-                if shop_name != 'Unknown Shop':
-                    break  # Found the shop name for an item, no need to check other items
-            
+                        break  # Stop looking if we find a matching prefix
+
+            # Append a simplified representation of the order to the list
             simplified_orders.append({
-                'ORDER_ID': order.get('id', 'N/A'),
-                'USER_NAME': f"{order['billing'].get('first_name', '')} {order['billing'].get('last_name', '')}".strip(),
-                'DATE': order.get('date_created_gmt', 'No date provided'),
-                'STATUS': order.get('status', 'No status provided'),
+                'ORDER_ID': order.get('id'),
+                'USER_NAME': "{} {}".format(order['billing']['first_name'], order['billing']['last_name']),
+                'DATE': order.get('date_created'),
+                'STATUS': order.get('status'),
                 'SHOP': shop_name,
-                'TOTAL': order.get('total', '0')
+                'TOTAL': order.get('total')
             })
-        return jsonify(simplified_orders), 200
+
+        return jsonify(simplified_orders)
     else:
         return jsonify({'error': 'Failed to fetch orders'}), 500
 
 
-
 @app.route('/complete-order/<int:order_id>', methods=['POST'])
 def complete_order(order_id):
-    data = {'status': 'completed'}
-    update_response = requests.post(f'{WC_API_URL}/{order_id}', json=data, 
-                                    auth=HTTPBasicAuth(WC_CONSUMER_KEY, WC_CONSUMER_SECRET), verify=False)
-    if update_response.ok:
-        # Invalidate the cache explicitly
-        cache.clear()  # This clears the entire cache, consider more targeted invalidation if needed
-        return jsonify({'success': 'Order completed'}), 200
-    else:
-        return jsonify({'error': 'Failed to complete order', 'details': update_response.text}), update_response.status_code
+    # Complete order logic
+    return jsonify({'success': 'Order completed'})
 
+@app.route('/webhook', methods=['POST'])
+def handle_webhook():
+    data = request.json
+    print("Webhook received:", data)
+    
+    if 'type' in data and data['type'] == 'order.created':
+        # Invalidate cache and notify clients
+        cache.clear()
+        notify_new_order(data)
+        return jsonify({'success': 'Order created webhook received and processed'})
+    
+    return jsonify({'message': 'Webhook received but not processed'})
 
+@app.route('/send-notification', methods=['POST'])
+def send_notification():
+    # Sending notification logic
+    return jsonify({'success': True, 'messageId': response})
+
+socketio = SocketIO(app)
+
+@socketio.on('connect', namespace='/ws')
+def handle_connect():
+    print('Client connected')
+    emit('response', {'message': 'Connected'})
+
+@socketio.on('disconnect')
+def handle_disconnect():
+    print('Client disconnected')
+
+def notify_new_order(order_data):
+    socketio.emit('new_order', {'order': order_data}, broadcast=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    socketio.run(app, debug=True, host='0.0.0.0')
