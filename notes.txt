@@ -1,7 +1,7 @@
-# Replace these with your actual WooCommerce API details
-WC_API_URL = 'https://qjump.local/wp-json/wc/v3/'
-CONSUMER_KEY = 'ck_acf32580377d9aba65183c62db60c892d3fce299'
-CONSUMER_SECRET = 'cs_fa87b25680d3259b672f89a394b6e9f3be081bf3'
+# WooCommerce API details
+WC_API_URL = 'https://qjump.online/wp-json/wc/v3/'
+CONSUMER_KEY = 'ck_3f8a3dd06b936ae126b5ba3dc97b8f01e9402461'
+CONSUMER_SECRET = 'cs_e7e7df6806379fc54f49d2a19c0015a256fbc5fc'
 
 cred = credentials.Certificate("C:/Users/W-Tech It Solutions/Downloads/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
 

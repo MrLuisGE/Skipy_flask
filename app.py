@@ -15,13 +15,13 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT': 300})
 
 # Initialize Firebase Admin
-cred = credentials.Certificate("C:/Users/W-Tech It Solutions/Downloads/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
+cred = credentials.Certificate("/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
 firebase_admin.initialize_app(cred)
 
 # WooCommerce API details
-WC_API_URL = 'https://qjump.local/wp-json/wc/v3/'
-CONSUMER_KEY = 'ck_acf32580377d9aba65183c62db60c892d3fce299'
-CONSUMER_SECRET = 'cs_fa87b25680d3259b672f89a394b6e9f3be081bf3'
+WC_API_URL = 'https://qjump.online/wp-json/wc/v3/'
+CONSUMER_KEY = 'ck_3f8a3dd06b936ae126b5ba3dc97b8f01e9402461'
+CONSUMER_SECRET = 'cs_e7e7df6806379fc54f49d2a19c0015a256fbc5fc'
 
 # SKU prefix to shop name mapping
 sku_prefix_name_mapping = {
@@ -40,49 +40,82 @@ sku_prefix_name_mapping = {
 def home():
     return jsonify({'message': 'Flask WebSocket server running'})
 
-@app.route('/latest-orders', methods=['GET'])
-@cache.cached(timeout=50)
-def get_latest_orders():
+@app.route('/orders/processing', methods=['GET'])
+@cache.cached(timeout=50, key_prefix='processing_orders')
+def get_processing_orders():
+    return get_orders_by_status('processing')
+
+@app.route('/orders/completed', methods=['GET'])
+@cache.cached(timeout=50, key_prefix='completed_orders')
+def get_completed_orders():
+    return get_orders_by_status('completed')
+
+def get_orders_by_status(status):
     params = {
         'per_page': 50,
         'order': 'desc',
-        'orderby': 'date'
+        'orderby': 'date',
+        'status': status
     }
     response = requests.get(WC_API_URL + "orders", params=params, auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
+    
     if response.ok:
         orders = response.json()
-        simplified_orders = []  # Initialize the list to hold simplified orders data
-
-        # Process each order and add to simplified_orders
-        for order in orders:
-            shop_name = 'Unknown Shop'  # Default shop name
-            # Attempt to determine shop name based on SKU prefix
-            for item in order.get('line_items', []):
-                sku = item.get('sku', '')
-                for prefix, name in sku_prefix_name_mapping.items():
-                    if sku.startswith(prefix):
-                        shop_name = name
-                        break  # Stop looking if we find a matching prefix
-
-            # Append a simplified representation of the order to the list
-            simplified_orders.append({
-                'ORDER_ID': order.get('id'),
-                'USER_NAME': "{} {}".format(order['billing']['first_name'], order['billing']['last_name']),
-                'DATE': order.get('date_created'),
-                'STATUS': order.get('status'),
-                'SHOP': shop_name,
-                'TOTAL': order.get('total')
-            })
-
+        simplified_orders = simplify_orders(orders)
         return jsonify(simplified_orders)
     else:
-        return jsonify({'error': 'Failed to fetch orders'}), 500
+        app.logger.error(f"Failed to fetch orders: {response.status_code} {response.text}")
+        return jsonify({'error': 'Failed to fetch orders'}), response.status_code
 
+def simplify_orders(orders):
+    simplified_orders = []
+    for order in orders:
+        shop_name = 'Unknown Shop'
+        products = []
+        for item in order.get('line_items', []):
+            sku = item.get('sku', '')
+            products.append({
+                'name': item.get('name'),
+                'quantity': item.get('quantity'),
+                'total': item.get('total')
+            })
+            for prefix, name in sku_prefix_name_mapping.items():
+                if sku.startswith(prefix):
+                    shop_name = name
+                    break
+
+        payment_method = order.get('payment_method_title', 'Unknown Payment Method')
+
+        simplified_orders.append({
+            'ORDER_ID': order.get('id'),
+            'USER_NAME': f"{order['billing']['first_name']} {order['billing']['last_name']}",
+            'DATE': order.get('date_created'),
+            'STATUS': order.get('status'),
+            'SHOP': shop_name,
+            'TOTAL': order.get('total'),
+            'PRODUCTS': products,
+            'PAYMENT_METHOD': payment_method
+        })
+    return simplified_orders
 
 @app.route('/complete-order/<int:order_id>', methods=['POST'])
 def complete_order(order_id):
-    # Complete order logic
-    return jsonify({'success': 'Order completed'})
+    # Define the data payload to update the order status
+    data_payload = {
+        'status': 'completed'
+    }
+    
+    # Make a PUT request to the WooCommerce API to update the order status
+    response = requests.put(f"{WC_API_URL}orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
+    
+    if response.ok:
+        # Invalidate cache and notify clients if needed
+        cache.clear()
+        socketio.emit('order_updated', {'order_id': order_id, 'status': 'completed'}, broadcast=True)
+        return jsonify({'success': 'Order status updated to completed'})
+    else:
+        app.logger.error(f"Failed to complete order {order_id}: {response.status_code} {response.text}")
+        return jsonify({'error': 'Failed to complete order'}), response.status_code
 
 @app.route('/webhook', methods=['POST'])
 def handle_webhook():
