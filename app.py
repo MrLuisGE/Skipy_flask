@@ -199,12 +199,6 @@ def complete_order(order_id):
     else:
         return jsonify({'error': 'Failed to complete order'}), response.status_code
 
-# Get orders by status with an optional shop filter
-# @app.route('/orders/<status>', methods=['GET'])
-# def get_orders_by_status_route(status):
-#    shop_name = request.args.get('shop', default=None, type=str)
-#    return jsonify(get_orders_by_status_and_shop(status, shop_name))
-
 
 @app.route('/orders/completed/<restaurant_name>/total-sales', methods=['GET'])
 def get_restaurant_total_sales(restaurant_name):
