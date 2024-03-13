@@ -21,7 +21,7 @@ cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT':
 #firebase_admin.initialize_app(cred)
 
 # WooCommerce API details
-WC_API_URL = 'https://qjump.online/wp-json/wc/v3/'
+WC_API_URL = 'https://qjump.online/wp-json/wc/v3'
 CONSUMER_KEY = 'ck_6a3064219310542f1a242952033e34a189d095fa'
 CONSUMER_SECRET = 'cs_3f509715d0138c9dd2ad1f6524c3fcda700a9d58'
 
@@ -63,7 +63,7 @@ def get_orders_by_status(status, restaurant_name=None):
             'status': status,
             'page': page  # Specify the current page
         }
-        response = requests.get(WC_API_URL + "orders", params=params, auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
+        response = requests.get(f"{WC_API_URL}/orders", params=params, auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
         
         if response.ok:
             orders = response.json()
@@ -167,7 +167,7 @@ def complete_order(order_id):
     data_payload = {'status': 'completed'}
     
     try:
-        response = requests.put(f"{WC_API_URL}orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
+        response = requests.put(f"{WC_API_URL}/orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
         
         if response.ok:
             # Clear the cache for both processing and completed orders
@@ -201,7 +201,7 @@ def get_orders_by_status_and_shop(status, shop_name=None):
         # Assuming there's a way to filter orders by shop name through your API
         params['shop'] = shop_name  # Adjust the parameter name as per your actual API
 
-    response = requests.get(WC_API_URL + "orders", params=params, auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET))
+    response = requests.get(f"{WC_API_URL}/orders", params=params, auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET))
 
     if response.ok:
         orders = response.json()
