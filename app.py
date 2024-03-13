@@ -1,25 +1,22 @@
-from flask import Flask, jsonify, request, abort
-from flask_cors import CORS
-import requests
-from requests.auth import HTTPBasicAuth
-from flask_caching import Cache
-import firebase_admin
-from firebase_admin import credentials, messaging
-from flask_socketio import SocketIO, emit
-from threading import Thread
-import time
-from datetime import datetime
-import pytz
-from collections import defaultdict
-import pymysql.cursors
-import phpserialize
 import os
-from functools import wraps
-import stripe
+from datetime import datetime
+
+import firebase_admin
 import mysql.connector
+import phpserialize
+import pymysql.cursors
+import requests
+import stripe
+from firebase_admin import credentials
+from flask import Flask, jsonify, request, abort
+from flask_caching import Cache
+from flask_cors import CORS
+from flask_socketio import SocketIO, emit
+from requests.auth import HTTPBasicAuth
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}}, allow_headers=["Authorization", "Content-Type", "X-API-Key"])
+CORS(app, supports_credentials=True, resources={r"/*": {"origins": "*"}},
+     allow_headers=["Authorization", "Content-Type", "X-API-Key"])
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT': 300})
@@ -32,7 +29,6 @@ CONSUMER_KEY = 'ck_b6d4bab7af943dd44fab3902735281511151df20'
 CONSUMER_SECRET = 'cs_b70925c86fe66dcc3b24108104240ba829ee75b8'
 SECRET_KEY = '27072001'
 stripe.api_key = "sk_test_51OX5FkH6esboORTBVLyd5v5sA7lMgDMQstDExbujgMdHvQwAHDJvxH1zmlXs8CkxyhylDcGxoOZF3SRyD0hRA85M00Hb1PhBhX"
-
 
 
 @app.before_request
@@ -51,7 +47,7 @@ def require_api_key():
 @app.route('/api')
 def home():
     print(f"####### ENDPOINT CALLED: home/api on {datetime.now()}")
-    return jsonify({'message': 'server running'})
+    return jsonify({'message': f'server running on {datetime.now()}'})
 
 
 def filter_orders_by_restaurant(restaurant_name, status):
@@ -82,6 +78,7 @@ def filter_orders_by_restaurant(restaurant_name, status):
         connection.close()
 
     return filtered_orders
+
 
 def get_orders_by_status(status, restaurant_name=None):
     # Database connection
@@ -115,7 +112,7 @@ def get_orders_by_status(status, restaurant_name=None):
                 params = []
 
             if restaurant_name:
-                #base_query += " AND max(case when pm.meta_key = '_store_name' then pm.meta_value end) = %s"
+                # base_query += " AND max(case when pm.meta_key = '_store_name' then pm.meta_value end) = %s"
                 base_query += " AND pm.meta_key = '_store_name' AND pm.meta_value = %s"
                 params.append(restaurant_name)
 
@@ -158,6 +155,7 @@ def get_total_from_order(order):
             total_value = 0.0  # Or handle it in a way that makes sense for your application
     return total_value
 
+
 def simplify_order_structure(cursor, order):
     # Simplify the order structure
     simplified_order = {
@@ -177,7 +175,6 @@ def simplify_order_structure(cursor, order):
     fetch_products_for_order(cursor, simplified_order['ORDER_ID'], simplified_order['PRODUCTS'])
 
     return simplified_order
-
 
 
 def fetch_products_for_order(cursor, order_id, products_list):
@@ -231,13 +228,13 @@ def fetch_products_for_order(cursor, order_id, products_list):
         products_list.append(product)
 
 
-
 @app.route('/orders', methods=['GET'])
 @app.route('/<store_name>/orders', methods=['GET'])
 def get_all_store_orders(store_name=None):
     print(f"####### ENDPOINT CALLED: /<store_name>/orders on {datetime.now()}")
     all_orders = get_orders_by_status(None, store_name)
     return jsonify(all_orders)
+
 
 @app.route('/orders/open', methods=['GET'])
 @app.route('/<store_name>/orders/open', methods=['GET'])
@@ -249,12 +246,14 @@ def get_store_open_orders(store_name=None):
     open_orders = processing_orders + preparing_orders + ready_orders
     return jsonify(open_orders)
 
+
 @app.route('/orders/processing', methods=['GET'])
 @app.route('/<store_name>/orders/processing', methods=['GET'])
 def get_store_processing_orders(store_name=None):
     print(f"####### ENDPOINT CALLED: /<store_name>/orders/processing on {datetime.now()}")
     processing_orders = get_orders_by_status('wc-processing', store_name)
     return jsonify(processing_orders)
+
 
 @app.route('/orders/preparing', methods=['GET'])
 @app.route('/<store_name>/orders/preparing', methods=['GET'])
@@ -263,12 +262,14 @@ def get_store_preparing_orders(store_name=None):
     preparing_orders = get_orders_by_status('wc-preparing', store_name)
     return jsonify(preparing_orders)
 
+
 @app.route('/orders/ready', methods=['GET'])
 @app.route('/<store_name>/orders/ready', methods=['GET'])
 def get_store_ready_orders(store_name=None):
     print(f"####### ENDPOINT CALLED: /<store_name>/orders/ready on {datetime.now()}")
     ready_orders = get_orders_by_status('wc-ready', store_name)
     return jsonify(ready_orders)
+
 
 @app.route('/orders/completed', methods=['GET'])
 @app.route('/<store_name>/orders/completed', methods=['GET'])
@@ -277,6 +278,7 @@ def get_store_completed_orders(store_name=None):
     completed_orders = get_orders_by_status('wc-completed', store_name)
     return jsonify(completed_orders)
 
+
 @app.route('/orders/refunded', methods=['GET'])
 @app.route('/<store_name>/orders/refunded', methods=['GET'])
 def get_store_refunded_orders(store_name=None):
@@ -284,23 +286,29 @@ def get_store_refunded_orders(store_name=None):
     refunded_orders = get_orders_by_status('wc-refunded', store_name)
     return jsonify(refunded_orders)
 
+
 # Change the order status to "preparing"
 @app.route('/prepare-order/<int:order_id>', methods=['POST'])
 def prepare_order(order_id):
+    print(f"####### ENDPOINT CALLED: /prepare-order/<int:order_id> on {datetime.now()}")
     data_payload = {'status': 'wc-preparing'}
-    response = requests.put(f"{WC_API_URL}/orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
+    response = requests.put(f"{WC_API_URL}/orders/{order_id}",
+                            auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
+                            json=data_payload, verify=False)
 
     if response.ok:
         # Your logic for when order status change is successful
         cache.delete('processing_orders')  # Update cache accordingly
-        socketio.emit('order_preparing', {'order_id': order_id}, broadcast=True)
+        socketio.emit('order_preparing', {'order_id': order_id}, broadcast=True)  # TODO socketio.emit or simply emit
         return jsonify({'success': 'Order status updated to preparing'})
     else:
         # Your logic for when order status change fails
         return jsonify({'error': 'Failed to change order status to preparing'}), response.status_code
 
+
 @app.route('/ready-order/<int:order_id>', methods=['POST'])
 def ready_order(order_id):
+    print(f"####### ENDPOINT CALLED: /ready-order/<int:order_id> on {datetime.now()}")
     # Authentication (if needed, depends on your setup)
     if not request.headers.get('Authorization') == f"Bearer {SECRET_KEY}":
         return jsonify({'error': 'Unauthorized'}), 401
@@ -317,7 +325,7 @@ def ready_order(order_id):
     if response.ok:
         # If the WooCommerce API call was successful, emit a socket event and/or clear cache if necessary
         # Emit a socket event for order status change to ready (if you're using WebSocket for real-time updates)
-        socketio.emit('order_ready', {'order_id': order_id}, broadcast=True)
+        socketio.emit('order_ready', {'order_id': order_id}, broadcast=True)  # TODO socketio.emit or simply emit
 
         # You may want to clear any relevant caches here if you're using caching
         # cache.delete('order_{}'.format(order_id))
@@ -325,21 +333,26 @@ def ready_order(order_id):
         return jsonify({'success': 'Order status updated to ready'}), 200
     else:
         # If the API call was unsuccessful, return an error message
-        return jsonify({'error': 'Failed to update order status to ready', 'details': response.text}), response.status_code
+        return jsonify(
+            {'error': 'Failed to update order status to ready', 'details': response.text}), response.status_code
+
 
 # Complete the order
 @app.route('/complete-order/<int:order_id>', methods=['POST'])
 def complete_order(order_id):
+    print(f"####### ENDPOINT CALLED: /complete-order/<int:order_id> on {datetime.now()}")
     data_payload = {'status': 'completed'}
-    response = requests.put(f"{WC_API_URL}/orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY,
-                                                                                 CONSUMER_SECRET), json=data_payload, verify=False)
+    response = requests.put(f"{WC_API_URL}/orders/{order_id}",
+                            auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
+                            json=data_payload, verify=False)
     if response.ok:
         cache.delete('processing_orders')
         cache.delete('completed_orders')
-        socketio.emit('order_completed', {'order_id': order_id}, broadcast=True)
+        socketio.emit('order_completed', {'order_id': order_id}, broadcast=True)  # TODO socketio.emit or simply emit
         return jsonify({'success': 'Order status updated to completed'})
     else:
         return jsonify({'error': 'Failed to complete order'}), response.status_code
+
 
 # Database configuration - update these values based on your database
 db_config = {
@@ -351,6 +364,7 @@ db_config = {
 
 # Assuming your API key is stored in an environment variable or secure location
 API_SECRET_KEY = 'sk_test_51OX5FkH6esboORTBVLyd5v5sA7lMgDMQstDExbujgMdHvQwAHDJvxH1zmlXs8CkxyhylDcGxoOZF3SRyD0hRA85M00Hb1PhBhX'
+
 
 def authenticate(request):
     """
@@ -365,6 +379,7 @@ def authenticate(request):
 
     # Validate both the Bearer token and the API key
     return bearer_token == '27072001' and api_key == API_SECRET_KEY
+
 
 def get_order_stripe_charge_id(order_id):
     """
@@ -400,9 +415,9 @@ def update_order_status(order_id, status):
         return False
 
 
-
 @app.route('/refund-order/<int:order_id>', methods=['POST'])
 def refund_order(order_id):
+    print(f"####### ENDPOINT CALLED: /refund-order/<int:order_id> on {datetime.now()}")
     if not authenticate(request):
         return jsonify({'error': 'Authentication failed'}), 403
 
@@ -424,6 +439,7 @@ def refund_order(order_id):
 
 @app.route('/user-shop-association', methods=['GET'])
 def user_shop_association():
+    print(f"####### ENDPOINT CALLED: /user-shop-association on {datetime.now()}")
     user_id = request.args.get('id')
     if not user_id:
         return jsonify({'error': 'User ID is required'}), 400
@@ -452,9 +468,11 @@ def user_shop_association():
 
 @app.route('/user-data', methods=['GET'])
 def get_user_data():
+    print(f"####### ENDPOINT CALLED: /user-data on {datetime.now()}")
     user_id = request.args.get('id')  # User ID is optional; if not provided, fetch data for all users.
     users_data = fetch_wordpress_users(user_id)
     return jsonify(users_data)
+
 
 def fetch_wordpress_users(user_id=None):
     connection = pymysql.connect(host='localhost',
@@ -501,7 +519,9 @@ def fetch_wordpress_users(user_id=None):
                         roles = ['No Role Assigned']
 
                 # Fetch the shop association directly from the user's metadata.
-                cursor.execute("SELECT meta_value FROM wp_usermeta WHERE user_id = %s AND meta_key = 'shop_association'", (user_id,))
+                cursor.execute(
+                    "SELECT meta_value FROM wp_usermeta WHERE user_id = %s AND meta_key = 'shop_association'",
+                    (user_id,))
                 result = cursor.fetchone()
                 shop_name = result['meta_value'] if result else 'No Shop Assigned'
 
@@ -518,9 +538,12 @@ def fetch_wordpress_users(user_id=None):
 
     return users
 
+
 @app.route('/products', methods=['GET'])
 def get_all_product_details():
-    response = requests.get(f"{WC_API_URL}/products", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
+    print(f"####### ENDPOINT CALLED: /products on {datetime.now()}")
+    response = requests.get(f"{WC_API_URL}/products",
+                            auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
 
     if response.ok:
         return jsonify(response.json())
@@ -530,17 +553,21 @@ def get_all_product_details():
 
 @app.route('/product/<int:product_id>', methods=['GET'])
 def get_product_details(product_id):
-    response = requests.get(f"{WC_API_URL}/products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
-
+    print(f"####### ENDPOINT CALLED: /product/<int:product_id> on {datetime.now()}")
+    response = requests.get(f"{WC_API_URL}/products/{product_id}",
+                            auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
+                            verify=False)
     if response.ok:
         return jsonify(response.json())
     else:
         return jsonify({'error': 'Failed to fetch product details'}), response.status_code
 
+
 @app.route('/product/<int:product_id>/details', methods=['GET'])
 def get_product_image_price(product_id):
-    response = requests.get(f"{WC_API_URL}/products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
-
+    print(f"####### ENDPOINT CALLED: /product/<int:product_id>/details on {datetime.now()}")
+    response = requests.get(f"{WC_API_URL}/products/{product_id}",
+                            auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
     if response.ok:
         product_data = response.json()
         product_details = {
@@ -551,22 +578,28 @@ def get_product_image_price(product_id):
     else:
         return jsonify({'error': 'Failed to fetch product details'}), response.status_code
 
+
 @app.route('/product/<int:product_id>/update-price', methods=['POST'])
 def update_product_price(product_id):
+    print(f"####### ENDPOINT CALLED: /product/<int:product_id>/update-price on {datetime.now()}")
     new_price = request.json.get('price')
     if not new_price:
         return jsonify({'error': 'New price is required'}), 400
 
     data_payload = {'regular_price': str(new_price)}
-    response = requests.put(f"{WC_API_URL}/products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
+    response = requests.put(f"{WC_API_URL}/products/{product_id}",
+                            auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
+                            json=data_payload, verify=False)
 
     if response.ok:
         return jsonify({'success': 'Product price updated'})
     else:
         return jsonify({'error': 'Failed to update product price'}), response.status_code
 
+
 @app.route('/product/<int:product_id>/update-image', methods=['POST'])
 def update_product_image(product_id):
+    print(f"####### ENDPOINT CALLED: /product/<int:product_id>/update-image on {datetime.now()}")
     # Check if the post request has the file part
     if 'file' not in request.files:
         return jsonify({'error': 'No file part in the request'}), 400
@@ -606,18 +639,24 @@ def update_product_image(product_id):
 
     return jsonify({'success': 'Product image updated'})
 
+
 # SocketIO event handlers
 @socketio.on('connect', namespace='/ws')
 def handle_connect():
     print('Client connected')
-    emit('response', {'message': 'Connected'})
+    emit('response', {'message': 'Connected'})  # TODO socketio.emit or simply emit
+
 
 @socketio.on('disconnect')
 def handle_disconnect():
     print('Client disconnected')
+    emit('response', {'message': 'Disconnected'})  # TODO socketio.emit or simply emit
+
 
 def notify_new_order(order_data):
-    socketio.emit('new_order', {'order': order_data}, broadcast=True)
+    print(f"New order made on {datetime.now()}")
+    socketio.emit('new_order', {'order': order_data}, broadcast=True)  # TODO socketio.emit or simply emit
+
 
 if __name__ == '__main__':
     socketio.run(app, debug=True, host='0.0.0.0', port=7000, keyfile='/root/ssl/key.pem', certfile='/root/ssl/cert.pem')
