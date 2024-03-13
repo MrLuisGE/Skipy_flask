@@ -48,8 +48,9 @@ def require_api_key():
         abort(403, description='Access denied')
 
 
-@app.route('/')
+@app.route('/api')
 def home():
+    print(f"####### ENDPOINT CALLED: home/api on {datetime.now()}")
     return jsonify({'message': 'server running'})
 
 
@@ -114,10 +115,19 @@ def get_orders_by_status(status, restaurant_name=None):
                 params = []
 
             if restaurant_name:
-                base_query += " AND max(case when pm.meta_key = '_store_name' then pm.meta_value end) = %s"
+                #base_query += " AND max(case when pm.meta_key = '_store_name' then pm.meta_value end) = %s"
+                base_query += " AND pm.meta_key = '_store_name' AND pm.meta_value = %s"
                 params.append(restaurant_name)
 
             base_query += " GROUP BY p.ID"
+
+            print("\n################# RUNNING QUERY: get_orders_by_status ################")
+            print(f"####### CALLED: {datetime.now()}")
+            print(f"####### RESTAURANT: {restaurant_name}")
+            print(f"####### STATUS: {status}")
+            print(f"####### PARAMETERS:{params}")
+            print(f"####### BASE QUERY:{base_query}")
+            print("############################ END OF QUERY ############################\n")
 
             # Execute the query
             cursor.execute(base_query, params)
@@ -134,6 +144,19 @@ def get_orders_by_status(status, restaurant_name=None):
     return all_orders
 
 
+def get_total_from_order(order):
+    # Check if 'total' is None and substitute it with a default value (e.g., 0.0)
+    total = order['total']
+    total_value = None
+    if total is None:
+        total_value = 0.0
+    else:
+        try:
+            total_value = float(total)
+        except ValueError:
+            # Handle the case where 'total' is not convertible to float
+            total_value = 0.0  # Or handle it in a way that makes sense for your application
+    return total_value
 
 def simplify_order_structure(cursor, order):
     # Simplify the order structure
@@ -145,7 +168,7 @@ def simplify_order_structure(cursor, order):
         'DATE': order['date_created'],
         'STATUS': order['status'],
         'SHOP': order['_store_name'],
-        'TOTAL': float(order['total']),
+        'TOTAL': get_total_from_order(order),  # float(order['total']),
         'PAYMENT_METHOD': order.get('payment_method_title', 'No payment method provided'),
         'PRODUCTS': []  # Initialize an empty list for products
     }
@@ -212,11 +235,14 @@ def fetch_products_for_order(cursor, order_id, products_list):
 @app.route('/orders', methods=['GET'])
 @app.route('/<store_name>/orders', methods=['GET'])
 def get_all_store_orders(store_name=None):
-    return jsonify(get_orders_by_status(None, store_name))
+    print(f"####### ENDPOINT CALLED: /<store_name>/orders on {datetime.now()}")
+    all_orders = get_orders_by_status(None, store_name)
+    return jsonify(all_orders)
 
 @app.route('/orders/open', methods=['GET'])
 @app.route('/<store_name>/orders/open', methods=['GET'])
 def get_store_open_orders(store_name=None):
+    print(f"####### ENDPOINT CALLED: /<store_name>/orders/open on {datetime.now()}")
     processing_orders = get_orders_by_status('wc-processing', store_name)
     preparing_orders = get_orders_by_status('wc-preparing', store_name)
     ready_orders = get_orders_by_status('wc-ready', store_name)
@@ -226,30 +252,35 @@ def get_store_open_orders(store_name=None):
 @app.route('/orders/processing', methods=['GET'])
 @app.route('/<store_name>/orders/processing', methods=['GET'])
 def get_store_processing_orders(store_name=None):
+    print(f"####### ENDPOINT CALLED: /<store_name>/orders/processing on {datetime.now()}")
     processing_orders = get_orders_by_status('wc-processing', store_name)
     return jsonify(processing_orders)
 
 @app.route('/orders/preparing', methods=['GET'])
 @app.route('/<store_name>/orders/preparing', methods=['GET'])
 def get_store_preparing_orders(store_name=None):
+    print(f"####### ENDPOINT CALLED: /<store_name>/orders/preparing on {datetime.now()}")
     preparing_orders = get_orders_by_status('wc-preparing', store_name)
     return jsonify(preparing_orders)
 
 @app.route('/orders/ready', methods=['GET'])
 @app.route('/<store_name>/orders/ready', methods=['GET'])
 def get_store_ready_orders(store_name=None):
+    print(f"####### ENDPOINT CALLED: /<store_name>/orders/ready on {datetime.now()}")
     ready_orders = get_orders_by_status('wc-ready', store_name)
     return jsonify(ready_orders)
 
 @app.route('/orders/completed', methods=['GET'])
 @app.route('/<store_name>/orders/completed', methods=['GET'])
 def get_store_completed_orders(store_name=None):
+    print(f"####### ENDPOINT CALLED: /<store_name>/orders/completed on {datetime.now()}")
     completed_orders = get_orders_by_status('wc-completed', store_name)
     return jsonify(completed_orders)
 
 @app.route('/orders/refunded', methods=['GET'])
 @app.route('/<store_name>/orders/refunded', methods=['GET'])
 def get_store_refunded_orders(store_name=None):
+    print(f"####### ENDPOINT CALLED: /<store_name>/orders/refunded on {datetime.now()}")
     refunded_orders = get_orders_by_status('wc-refunded', store_name)
     return jsonify(refunded_orders)
 

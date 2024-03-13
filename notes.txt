@@ -16,3 +16,30 @@ sku_prefix_name_mapping = {
     'lionfoodmarket-': 'Lion Food Market',
     'eventoesportivo-': 'Evento Esportivo',
 }
+
+# QUERIES
+
+# 1) Find processing orders from Snack:
+
+SELECT p.ID as order_id, p.post_date as date_created, p.post_status as status,
+                   max(case when pm.meta_key = '_billing_first_name' then pm.meta_value end) as billing_first_name,
+                   max(case when pm.meta_key = '_billing_last_name' then pm.meta_value end) as billing_last_name,
+                   max(case when pm.meta_key = '_billing_email' then pm.meta_value end) as billing_email,
+                   max(case when pm.meta_key = '_billing_phone' then pm.meta_value end) as billing_phone,
+                   max(case when pm.meta_key = '_order_total' then pm.meta_value end) as total,
+                   max(case when pm.meta_key = '_store_name' then pm.meta_value end) as _store_name,
+                   max(case when pm.meta_key = '_payment_method_title' then pm.meta_value end) as payment_method_title
+FROM wp_posts p
+LEFT JOIN wp_postmeta pm ON p.ID = pm.post_id
+WHERE p.post_type = 'shop_order'
+AND pm.meta_key = '_store_name' AND pm.meta_value = %s
+AND p.post_status = 'wc-processing'
+GROUP BY p.ID;
+
+# 1.1) Find processing orders from Snack simplified:
+
+SELECT p.ID as order_id, p.post_date as date_created, p.post_status as status, pm.meta_value  as _store_name
+FROM wp_posts p LEFT JOIN wp_postmeta pm ON p.ID = pm.post_id
+WHERE p.post_type = 'shop_order'
+AND pm.meta_key = '_store_name' AND pm.meta_value = %s
+AND p.post_status = 'wc-processing';
