@@ -1,1630 +1,0 @@
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 2, in <module>
-    from flask_cors import CORS
-ModuleNotFoundError: No module named 'flask_cors'
-
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 2, in <module>
-    from flask_cors import CORS
-ModuleNotFoundError: No module named 'flask_cors'
-
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 2, in <module>
-    from flask_cors import CORS
-ModuleNotFoundError: No module named 'flask_cors'
-
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 2, in <module>
-    from flask_cors import CORS
-ModuleNotFoundError: No module named 'flask_cors'
-
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 2, in <module>
-    from flask_cors import CORS
-ModuleNotFoundError: No module named 'flask_cors'
-
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 247, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 3, in <module>
-    import requests
-ModuleNotFoundError: No module named 'requests'
-
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 247, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 5, in <module>
-    from flask_caching import Cache
-ModuleNotFoundError: No module named 'flask_caching'
-
-Usage: flask run [OPTIONS]
-Try 'flask run --help' for help.
-
-Error: While importing 'app', an ImportError was raised:
-
-Traceback (most recent call last):
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 247, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 6, in <module>
-    import firebase_admin
-ModuleNotFoundError: No module named 'firebase_admin'
-
-Traceback (most recent call last):
-  File "/root/Qjump-API/myenv/bin/flask", line 8, in <module>
-    sys.exit(main())
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 1107, in main
-    cli.main()
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/click/core.py", line 1078, in main
-    rv = self.invoke(ctx)
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/click/core.py", line 1688, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/click/core.py", line 1434, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/click/core.py", line 783, in invoke
-    return __callback(*args, **kwargs)
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/click/decorators.py", line 92, in new_func
-    return ctx.invoke(f, obj, *args, **kwargs)
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/click/core.py", line 783, in invoke
-    return __callback(*args, **kwargs)
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 955, in run_command
-    raise e from None
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 939, in run_command
-    app: WSGIApplication = info.load_app()
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 341, in load_app
-    app = locate_app(import_name, None, raise_if_not_found=False)
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/flask/cli.py", line 247, in locate_app
-    __import__(module_name)
-  File "/root/Qjump-API/app.py", line 18, in <module>
-    cred = credentials.Certificate("C:/Users/W-Tech It Solutions/Downloads/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
-  File "/root/Qjump-API/myenv/lib/python3.10/site-packages/firebase_admin/credentials.py", line 83, in __init__
-    with open(cert) as json_file:
-FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/W-Tech It Solutions/Downloads/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json'
- * Debug mode: off
-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:7000
- * Running on http://194.31.150.176:7000
-[33mPress CTRL+C to quit[0m
-109.88.63.130 - - [06/Feb/2024 21:06:11] "GET / HTTP/1.1" 200 -
-109.88.63.130 - - [06/Feb/2024 21:06:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:06:19] "GET /orders/processing HTTP/1.1" 200 -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:06:26] "GET /orders/completed HTTP/1.1" 200 -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:10:42] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [06/Feb/2024 21:12:18] code 400, message Bad request version ('ææ¡\x90}j¾³\x89')
-109.88.63.130 - - [06/Feb/2024 21:12:18] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03´v"o÷£ïv~Ó¢ö¨\x9c\x1e@x[´ø\x19\x01_Ê8]¾\x9eGK\x93\x14 :À© ñ\x15\x08\x1cy\x17\x09ææ¡\x90}j¾³\x89[0m" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [06/Feb/2024 21:12:18] code 400, message Bad request version ('-Z')
-109.88.63.130 - - [06/Feb/2024 21:12:18] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x84\x8f\x16 A\x0f\x88QÆ\x00nÔ\x19Å(\x97\x07%ìÏ Ukä¿=rBcºoÔ *÷²4ô0\x0eÁ±W\x872U'yÁmª\x98 -Z[0m" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [06/Feb/2024 21:12:18] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02:\x01\x00\x026\x03\x03\x9cT\x03°åöZ')
-109.88.63.130 - - [06/Feb/2024 21:12:18] "[35m[1m\x16\x03\x01\x02:\x01\x00\x026\x03\x03\x9cT\x03°åöZ\x0cø [0m" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [06/Feb/2024 21:12:18] code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x9a\x9a\x00\x00\x00')
-109.88.63.130 - - [06/Feb/2024 21:12:18] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¬\x18\x11´¨Ú\x1eA³ÙRWß4Ç\x92\x02\x16²6\x1b¥Òæ\x9eMÐ<R\x8a\x0e\x9e Þß8«vg=\x07õõG\x92AÌ\x81\x8bcøÜ¢P÷ÏçÚÂ\x85\x8a&Á\x03v\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x9a\x9a\x00\x00\x00[0m" HTTPStatus.BAD_REQUEST -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:27:16] "GET /orders/processing HTTP/1.1" 200 -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:27:26] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [06/Feb/2024 21:27:32] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [06/Feb/2024 21:28:04] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [06/Feb/2024 21:28:07] "GET /orders/completed HTTP/1.1" 200 -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:28:10] "GET /orders/processing HTTP/1.1" 200 -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:28:46] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [06/Feb/2024 21:28:52] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [06/Feb/2024 21:28:54] "GET /orders/processing HTTP/1.1" 200 -
-/root/Qjump-API/myenv/lib/python3.10/site-packages/urllib3/connectionpool.py:1103: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
-  warnings.warn(
-109.88.63.130 - - [06/Feb/2024 21:30:32] "GET /orders/completed HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-109.88.63.130 - - [07/Feb/2024 03:04:40] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x03I\x01\x00\x03E\x03\x03È¿-Â\x02²dÃ/9ì\x12\x10°N')
-109.88.63.130 - - [07/Feb/2024 03:04:40] "I EÈ¿-Â²dÃ/9ì°N©½í" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:04:40] code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x02|ÚÚ\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 03:04:40] "é åÛµÞ;Õ×¼B]pÎ")L.;!mÿuÞäÎK¾:öÄ Q:,mà&Ëm.@ð:Àâqö.³ÌÿHÜñjyT  À+À/À,À0Ì©Ì¨ÀÀ   / 5 |ÚÚ   " HTTPStatus.BAD_REQUEST -
-[2024-02-07 03:04:59,007] WARNING in __init__: WebSocket transport not available. Install gevent-websocket for improved performance.
-Traceback (most recent call last):
-  File "/root/Qjump-API/app.py", line 157, in <module>
-    socketio.run(app, host='0.0.0.0', port=7000, ssl_context=ssl_context)
-  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 718, in run
-    self.wsgi_server.serve_forever()
-  File "/usr/local/lib/python3.10/dist-packages/gevent/baseserver.py", line 398, in serve_forever
-    self.start()
-  File "/usr/local/lib/python3.10/dist-packages/gevent/baseserver.py", line 336, in start
-    self.init_socket()
-  File "/usr/local/lib/python3.10/dist-packages/gevent/pywsgi.py", line 1668, in init_socket
-    StreamServer.init_socket(self)
-  File "/usr/local/lib/python3.10/dist-packages/gevent/server.py", line 173, in init_socket
-    self.socket = self.get_listener(self.address, self.backlog, self.family)
-  File "/usr/local/lib/python3.10/dist-packages/gevent/server.py", line 185, in get_listener
-    return _tcp_listener(address, backlog=backlog, reuse_addr=cls.reuse_addr, family=family)
-  File "/usr/local/lib/python3.10/dist-packages/gevent/server.py", line 264, in _tcp_listener
-    sock.bind(address)
-  File "/usr/local/lib/python3.10/dist-packages/gevent/_socketcommon.py", line 547, in bind
-    return self._sock.bind(address)
-OSError: [Errno 98] Address already in use: ('0.0.0.0', 7000)
-109.88.63.130 - - [07/Feb/2024 03:05:04] code 400, message Bad request version ('=÷\x18\x0fª\x10]Q')
-109.88.63.130 - - [07/Feb/2024 03:05:04] ": 6ÍÎ}¼¿äz+_¿P*:Kçqá¿×aü/Ûßõ· ¶"ê~oMÁÇ)I#Â¾3eÿ¾©èÏcÉ=»  ::À+À/À,À0Ì©Ì¨ÀÀ   / 5 Í  þ   y  $xFR±k»@RPU =÷ª]Q" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:05:04] code 400, message Bad request syntax ('\x16\x03\x01\x02\x1a\x01\x00\x02\x16\x03\x03"\x9ey"nT`úñ§eä²\t')
-109.88.63.130 - - [07/Feb/2024 03:05:04] " "y"nT`úñ§eä²	" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:05:09] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x12\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 03:05:09] ": 6ú¯./Â)VUuÓÂ¸f¦Râä´n0 o-F J÷ÀO$ÞZòm\±^³Ì¾yt\@\y+äíb?  ::À+À/À,À0Ì©Ì¨ÀÀ   / 5 ÍZZ   #     h2http/1.1 3 + )úú     *âRd\þ;S4j|oº ÔfÃ\¹6F       " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:05:10] code 400, message Bad request version ('j´')
-109.88.63.130 - - [07/Feb/2024 03:05:10] " :$Âg{7Ïv^$ùäê«kÌIHW-Ó zºDhOý0gµÅËr¦:m	 o^,tpD°Öe  jjÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­ZZ   3 + )     ¢µZ9¿Í¦2J0`¢óQ¡ñý`ÅÂïþcþ ú   #  Ælïzj´" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:05:10] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
-109.88.63.130 - - [07/Feb/2024 03:05:10] "  ü)úó×xReÇwz6sÀà½£EäUfBÂW 0æ×w05£Töd2ó¨åë¤/ùX5så  ZZÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ÊÊ     h2http/1.1             + ZZ #  Di  h2 - þ º     ñ~WZg÷æE]bª)÷6¿ÎÎëoE) =x`TwÐdÒ`÷§GeÕl_ð±då¬ÝÅ%ÃÛ±sA=6ùsÁÎB'ÝÜwx9õ±þWûCÛáò¹	VØô:.=*`Lx"âIpb]«ÿ¤Ã`¯Â<ÎÏ$kEó6õGä©0ô!:'sZp};DRU/%14+ûãË×=ÿ   3 + )**     qB1{ô%e§r?íVQ£ESé»cCtâF×¼­k       " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:05:11] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
-109.88.63.130 - - [07/Feb/2024 03:05:11] " Øójî2§ÝJM Þ}¿¼`%µs5È>1Dn» ×Ï@ß¶ÒHh%¢þnóÁ=ÙË6ìc¨³6%ì  ªªÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­ÊÊ   -     " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:05:11] code 400, message Bad request version ('\x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xad')
-109.88.63.130 - - [07/Feb/2024 03:05:11] " ÍüG»X½£ãØNA<2»Í9ÙOC§ÿ4Vïéy4$ Jg«´p<4îíãgf0Ä Ðc³  À+À/À,À0Ì©Ì¨ÀÀ   / 5 ­" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:05:11] code 400, message Bad request version ('\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00\x17\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
-109.88.63.130 - - [07/Feb/2024 03:05:11] "  üm [ã *bYç?jßIkæjK&2Î:j«Í Ã<8Øû81i	,ÚÅí9V£õN±Ók3¶!/  ZZÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 úú  þ º   w  B5ÿt«9ªö¿¸D|èN¸'©wóº~8Vvý¾²>% )n=]Ë¦ÕÆ¤7ÀÜ¡³*9)ù iPÉ6Öý°&4lCìÃ/9&ä·Ì'Zn1ÊÉÒåv,;Ûb$[ÂÊáÁØJXìeøì£CÓJÙêç{ñ& Æ®Ü*Rò rÒ!QNð !vÇ,¿oÐ 3°ÓºPfppt¸ ø§£Þ 3 + )ÚÚ     Äý@0Ì²\:ÃïÊh<îXIz'ºòÁï®q #  Di  h2            h2http/1.1ÿ         " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:06:16] code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xadjj\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 03:06:16] " ±´wN¿$6ÔåEÁþx^TXdÞÁð~K*R­ Î¦¯Å&ÌwÅ zÅ/ykL¹~#Ft´Í  ZZÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­jj   " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:06:16] code 400, message Bad request version ('Ù¨Æ¯6úÓ\x1bÊ#B¬ß\x83p;')
-109.88.63.130 - - [07/Feb/2024 03:06:16] "  üñ¿Îæ®IIHVV Ã|MÊ"	 ËìÒæÂÂÄ Â²³üJãQ^äPeGö½,eyÕ Ð-à>  À+À/À,À0Ì©Ì¨ÀÀ   / 5               h2http/1.1 + úúDi  h2    #   3 + )ºº     ¬ºØhÿóQÉ½x8ï48·9qýp¤+±2Bþ º     c}Õ¤ãyþø	Ù¨Æ¯6úÓÊ#B¬ßp;" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:07:01] "GET / HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 03:07:01] code 400, message Bad request version ('\x02h2\x08http/1.1\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03Di\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 03:07:01] "  üãá+OV	?oÜë}4ÄÔY/ý¿×ªÝÚ£¹ ZèmóÏÍ9éü±\âù¾ü=U^4]e  ÚÚÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ::        ÿ   -  #   3 + )ZZ     6·	tòàÎ1ÿÅÂò_zjàf3ìAsÜYf³2þ Ú   å  â¸lÔ0ì¹®ãKzåvAïøZ}K87íH/üj °cÓÅ¼ßu[Ò84öÂëaÒÐCÅô3ÖZÞ#*IpYÖúÑÛrá½úÙ!íèµÜ¥J©OGáóµÐ*0HûC;æ6.¯?Bðªü	a5v°Pi¦u=eÐ°ôÝÄäêRvó,Xb#×OÔXrAd7H T³ºÍòK!%TDf*ô/üøka"CìzR,4NùÙÅ')z½T5         h2http/1.1 + Di  h2       " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:07:02] code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xad**\x00\x00\x00#\x00\x00\x00\x17\x00\x00\x00+\x00\x07\x06\x8a\x8a\x03\x04\x03\x03\x00')
-109.88.63.130 - - [07/Feb/2024 03:07:02] " hÝïô9Áún4+RßÅß¢¥'·ºKû{­¤µ Ï8Á[*KéóP§jÂ°gckHÞÏLz¤¤7  À+À/À,À0Ì©Ì¨ÀÀ   / 5 ­**   #      +  " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 03:07:02] "GET /favicon.ico HTTP/1.1" 404 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 03:07:08] "GET /orders/completed HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-109.88.63.130 - - [07/Feb/2024 09:59:33] code 400, message Bad request version ('ü2È=3Ä}zßÖ&üº=\x00')
-109.88.63.130 - - [07/Feb/2024 09:59:33] "  ü¦Øô,Ö äÊÂ½P|yÑ{Ôýh4õÎý ÒÖÁ&c0añr®áycÓ0Ä¶!Ør­C2Þ"íèÉ  ::À+À/À,À0Ì©Ì¨ÀÀ   / 5 JJ        h2http/1.1 + :: -           3 + )úú     ½µT`cË¸L7B}ü2È=3Ä}zßÖ&üº= " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 09:59:33] code 400, message Bad request version ('LcA§¾ªyì`5\x83@\x07"îÝ\x00')
-109.88.63.130 - - [07/Feb/2024 09:59:33] "  üDòB.|RÉÞ¡©H`ËçË.]h %°rÙ¤tFMSNÒÄÏq4êº>5ö¦4ï7ßö2C  À+À/À,À0Ì©Ì¨ÀÀ   / 5   þ Ú   Ù  hÇá|ujÏSÁ_ â M³j¸¦ V6NS0 °ôj3SIÍOQÅ¢ÔPîyÖ¹yÏeö!Û1­yqËL~»ÐÍ­ª¬{YyhÃÚ³W/Üºçs)ò-ø)WeZ.à½ÞDÒPQtlêæÂü¬Ð·¦^4îfÊèdo lÅW_Ï:û6§<H?(¡´i#TÊ-^ÒãQnë>ºLcA§¾ªyì`5@"îÝ " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 09:59:37] code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ºº\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 09:59:37] "  üî6"$9lÏ83Ôälö,7#ÿ­iTÝrz` Ó\²ù®huäÍ*æ	ªÈ&éO'7·"$O}l  ªªÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ºº            " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 09:59:37] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
-109.88.63.130 - - [07/Feb/2024 09:59:37] ": 6å×êùuú¼§üâï=ó<÷õ«Ã©P íÓ®{$"^Ò ÔB#6 c±ÊOÇhÅªNvv²s_	ßR  À+À/À,À0Ì©Ì¨ÀÀ   / 5 Ízz     Di  h2    " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 09:59:51] code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00-\x00\x02\x01\x01\x003\x00+\x00)')
-109.88.63.130 - - [07/Feb/2024 09:59:51] ": 6rÎãi%Díq9ªã$®^M&\Lx§êÌÛM QÁè¨¯m+Ëqt¹øº+~µ<1a³x°@	  ÚÚÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 Íjj  þ   ú  ç¿²Î¬OaÓD%yà¿l¢cÄñ@@O¦ÎD ðAEïu¿ftå@¸2IÒÌ=x²Aý,.¿ïìì¤I·6ö¿[Ø)iªZÚ%Ï4L!¼ÑIWzKLdÍEïÉ£°fMXo¢zÉ²:('u~=#p|å/éB)¥´¦Y.¼×U¸N³bÕ;tìn° ¯H%	òl:Çßî¶²½ÿÞâ¦Æta­»Þ'ÎY¨M¥Áàmö©lï;æ¢øp­w¾¹nÔFu·h?X$ÅQO°Vn}FÁ¬òþ¹¸{düAßÂß;U[ÿ           h2http/1.1       -  3 + )" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 09:59:51] code 400, message Bad request version ('\x00\x02\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 09:59:51] "  ü3Båò8÷V=Oq`66f ³ÉâV,ômAu ®3ó½Ël+Ì"å\ÌÝ43ñùa"·¡Pc  À+À/À,À0Ì©Ì¨ÀÀ   / 5 zz   - Di  h2          #   " HTTPStatus.BAD_REQUEST -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 09:59:58] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 09:59:58] "GET /favicon.ico HTTP/1.1" 404 -
-109.88.63.130 - - [07/Feb/2024 10:00:11] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 10:00:17,524] ERROR in app: Exception on /complete-order/12012 [POST]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/root/Qjump-API/app.py", line 115, in complete_order
-    socketio.emit('order_updated', {'order_id': order_id, 'status': 'completed'}, broadcast=True)
-  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 462, in emit
-    self.server.emit(event, *args, namespace=namespace, to=to,
-TypeError: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 10:00:17] "POST /complete-order/12012 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 10:00:21] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 10:50:48] code 400, message Bad request version ('÷W\x0fþ\x00*zz\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
-109.88.63.130 - - [07/Feb/2024 10:50:48] "  ü¨æ¨ ðDS´ñÔÄü(ù¬(¢7ÙSTÏÑH LÓåÙ{Çd~,ÎÐ/t«mRA¯­g÷Wþ *zzÀ,À+Ì©À0À/Ì¨À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:48] code 400, message Bad request version ('\\ëé\x19\x0f¨\x99\x935\x18o\x13ÃÉ£F\x91\x17kgÚÑ;Ý\x8c\x00,ªª\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
-109.88.63.130 - - [07/Feb/2024 10:50:48] "  üââ=|ÂËî?é¢aA¦« í}ÎçÌÓã 3äY±R\ëé¨5oÃÉ£FkgÚÑ;Ý ,ªªÀ,À+Ì©À0À/Ì¨À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:48] code 400, message Bad request syntax ('\x16\x03\x01\x00}\x01\x00\x00y\x03\x01\x92\x12á\x8f\x8bJ¦PN\x0e¹X@MQ½¾\x02Ü:\x14!+àXC\\v¢8íÔ\x00\x00\x14À')
-109.88.63.130 - - [07/Feb/2024 10:50:48] " }  yáJ¦PN¹X@MQ½¾Ü:!+àXC\v¢8íÔ  À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:48] code 400, message Bad request version ('\x8d¾£B¸73øþÌ\x90\x95ò\x14\x08u#\x0fÏ4n&õmM^\x01¥Ø¸[\x9c\x00*\x1a\x1a\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
-109.88.63.130 - - [07/Feb/2024 10:50:48] "  üÝ¢Ý(:uáqàt7x]NçÕÎá'aa{zP ¾£B¸73øþÌòu#Ï4n&õmM^¥Ø¸[ *À,À+Ì©À0À/Ì¨À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:48] code 400, message Bad request version ('\x8b\x05ÉtMGe1(sq»\x00,\x8a\x8a\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
-109.88.63.130 - - [07/Feb/2024 10:50:48] "  üDkL_Û?¥ßôµ³Q¡Úß§9Z³×7Eé ê´üÀÉð5>^ÉtMGe1(sq» ,À,À+Ì©À0À/Ì¨À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:48] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00}\x01\x00\x00y\x03\x01;\x17É\x97z9ÁÄ;Å3Ãb¯\x8dð\x06>{X\x87\x04ÐMÀú\x15')
-109.88.63.130 - - [07/Feb/2024 10:50:48] " }  y;Éz9ÁÄ;Å3Ãb¯ð>{XÐMÀúa²_c  À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:49] code 400, message Bad request version ('Wjúa\x05\x98Õ\x13\x8aJ\x92Á\x16×2\x0eìº]\x14Ù{\x90vµ\x7fï(\x8a¾,x\x00*JJ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
-109.88.63.130 - - [07/Feb/2024 10:50:49] "  üvz¦ìÎ8üò[èeÚêb_ãX<ãºtàzÊ WjúaÕJÁ×2ìº]Ù{vµï(¾,x *JJÀ,À+Ì©À0À/Ì¨À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:49] code 400, message Bad request version ('\x822ó6!FÐcMÀ©[ô\x9d\x9a\x7fÐÃ3ö\x17\x92\x03\x0eý°Z}8ã\\\x8d\x00,\x8a\x8a\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
-109.88.63.130 - - [07/Feb/2024 10:50:49] "  üXó,ÖÜ(Ðåí"n³Ð»Ïdé8£Î}$	cÒ¬ 2ó6!FÐcMÀ©[ôÐÃ3öý°Z}8ã\ ,À,À+Ì©À0À/Ì¨À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:49] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00}\x01\x00\x00y\x03\x012ñB\x13\x8bT`¢~\x94Áp)À\x8a®;§'\x12\x8a³\x11V;\x17\x82")
-109.88.63.130 - - [07/Feb/2024 10:50:49] " }  y2ñBT`¢~Áp)À®;§'³V;IÙ·ù  À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:49] code 400, message Bad request version ('´\x9c\x02#i½A\x00*jj\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
-109.88.63.130 - - [07/Feb/2024 10:50:49] "  ü¼ÏÉÛ-ó´ñÂÂäK&sà#ÞP$±öÎ:D!² Df¯®Ò.¯;Íë¹K[Ýe B6´#i½A *jjÀ,À+Ì©À0À/Ì¨À" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:49] code 400, message Bad request version ('8ßÊ|Vr\x02®ì2qñÄä¯c#yi\x14ê^\x8añ!n4dÉz-\x80\x00,')
-109.88.63.130 - - [07/Feb/2024 10:50:49] "  ü/ù¿9[æ!¢l¾§EÅ£yýÁ¢úâ{è 8ßÊ|Vr®ì2qñÄä¯c#yiê^ñ!n4dÉz- ," HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 10:50:49] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00}\x01\x00\x00y\x03\x01}E\x11Ç,®\x96Î£')
-109.88.63.130 - - [07/Feb/2024 10:50:49] " }  y}EÇ,®Î£¥à.ªIeåÍýËP¦ÀzâÓfwÜ  À" HTTPStatus.BAD_REQUEST -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:14:41] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 17:14:45] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 17:14:50,012] ERROR in app: Exception on /complete-order/11994 [POST]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/root/Qjump-API/app.py", line 115, in complete_order
-    socketio.emit('order_updated', {'order_id': order_id, 'status': 'completed'}, broadcast=True)
-  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 462, in emit
-    self.server.emit(event, *args, namespace=namespace, to=to,
-TypeError: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 17:14:50] "POST /complete-order/11994 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:14:54] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 17:15:04] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 17:15:09,148] ERROR in app: Exception on /complete-order/11995 [POST]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/root/Qjump-API/app.py", line 115, in complete_order
-    socketio.emit('order_updated', {'order_id': order_id, 'status': 'completed'}, broadcast=True)
-  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 462, in emit
-    self.server.emit(event, *args, namespace=namespace, to=to,
-TypeError: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 17:15:09] "POST /complete-order/11995 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:15:15] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:17:47] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:17:52] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 17:17:53] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 17:17:57,468] ERROR in app: Exception on /complete-order/12011 [POST]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/root/Qjump-API/app.py", line 115, in complete_order
-    socketio.emit('order_updated', {'order_id': order_id, 'status': 'completed'}, broadcast=True)
-  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 462, in emit
-    self.server.emit(event, *args, namespace=namespace, to=to,
-TypeError: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 17:17:57] "POST /complete-order/12011 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:18:42] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 17:18:45,530] ERROR in app: Exception on /complete-order/12010 [POST]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/root/Qjump-API/app.py", line 115, in complete_order
-    socketio.emit('order_updated', {'order_id': order_id, 'status': 'completed'}, broadcast=True)
-  File "/usr/local/lib/python3.10/dist-packages/flask_socketio/__init__.py", line 462, in emit
-    self.server.emit(event, *args, namespace=namespace, to=to,
-TypeError: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 17:18:45] "POST /complete-order/12010 HTTP/1.1" 500 -
-109.88.63.130 - - [07/Feb/2024 17:20:42] "GET /complete-order/131221 HTTP/1.1" 405 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Traceback (most recent call last):
-  File "/usr/bin/flask", line 33, in <module>
-    sys.exit(load_entry_point('Flask==2.0.1', 'console_scripts', 'flask')())
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 990, in main
-    cli.main(args=sys.argv[1:])
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 596, in main
-    return super().main(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
-    rv = self.invoke(ctx)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1659, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/decorators.py", line 84, in new_func
-    return ctx.invoke(f, obj, *args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 845, in run_command
-    app = DispatchingApp(info.load_app, use_eager_loading=eager_loading)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 321, in __init__
-    self._load_unlocked()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 346, in _load_unlocked
-    self._app = rv = self.loader()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 406, in load_app
-    app = locate_app(self, import_name, None, raise_if_not_found=False)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/qjump-api/app.py", line 18, in <module>
-    cred = credentials.Certificate("/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
-  File "/usr/local/lib/python3.10/dist-packages/firebase_admin/credentials.py", line 83, in __init__
-    with open(cert) as json_file:
-FileNotFoundError: [Errno 2] No such file or directory: '/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json'
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Traceback (most recent call last):
-  File "/usr/bin/flask", line 33, in <module>
-    sys.exit(load_entry_point('Flask==2.0.1', 'console_scripts', 'flask')())
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 990, in main
-    cli.main(args=sys.argv[1:])
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 596, in main
-    return super().main(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
-    rv = self.invoke(ctx)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1659, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/decorators.py", line 84, in new_func
-    return ctx.invoke(f, obj, *args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 845, in run_command
-    app = DispatchingApp(info.load_app, use_eager_loading=eager_loading)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 321, in __init__
-    self._load_unlocked()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 346, in _load_unlocked
-    self._app = rv = self.loader()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 406, in load_app
-    app = locate_app(self, import_name, None, raise_if_not_found=False)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/qjump-api/app.py", line 18, in <module>
-    cred = credentials.Certificate("/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
-  File "/usr/local/lib/python3.10/dist-packages/firebase_admin/credentials.py", line 83, in __init__
-    with open(cert) as json_file:
-FileNotFoundError: [Errno 2] No such file or directory: '/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json'
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Traceback (most recent call last):
-  File "/usr/bin/flask", line 33, in <module>
-    sys.exit(load_entry_point('Flask==2.0.1', 'console_scripts', 'flask')())
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 990, in main
-    cli.main(args=sys.argv[1:])
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 596, in main
-    return super().main(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
-    rv = self.invoke(ctx)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1659, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/decorators.py", line 84, in new_func
-    return ctx.invoke(f, obj, *args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 845, in run_command
-    app = DispatchingApp(info.load_app, use_eager_loading=eager_loading)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 321, in __init__
-    self._load_unlocked()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 346, in _load_unlocked
-    self._app = rv = self.loader()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 406, in load_app
-    app = locate_app(self, import_name, None, raise_if_not_found=False)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/qjump-api/app.py", line 18, in <module>
-    cred = credentials.Certificate("/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
-  File "/usr/local/lib/python3.10/dist-packages/firebase_admin/credentials.py", line 83, in __init__
-    with open(cert) as json_file:
-FileNotFoundError: [Errno 2] No such file or directory: '/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json'
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Traceback (most recent call last):
-  File "/usr/bin/flask", line 33, in <module>
-    sys.exit(load_entry_point('Flask==2.0.1', 'console_scripts', 'flask')())
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 990, in main
-    cli.main(args=sys.argv[1:])
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 596, in main
-    return super().main(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
-    rv = self.invoke(ctx)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1659, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/decorators.py", line 84, in new_func
-    return ctx.invoke(f, obj, *args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 845, in run_command
-    app = DispatchingApp(info.load_app, use_eager_loading=eager_loading)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 321, in __init__
-    self._load_unlocked()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 346, in _load_unlocked
-    self._app = rv = self.loader()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 406, in load_app
-    app = locate_app(self, import_name, None, raise_if_not_found=False)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/qjump-api/app.py", line 18, in <module>
-    cred = credentials.Certificate("/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
-  File "/usr/local/lib/python3.10/dist-packages/firebase_admin/credentials.py", line 83, in __init__
-    with open(cert) as json_file:
-FileNotFoundError: [Errno 2] No such file or directory: '/root/Qjump-API/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json'
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:55:23] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 17:55:24] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:56:22] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 17:56:34,985] ERROR in app: Exception in completing order 12009: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 17:56:34] "POST /complete-order/12009 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 17:56:44] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 17:56:50,927] ERROR in app: Exception in completing order 12008: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 17:56:50] "POST /complete-order/12008 HTTP/1.1" 500 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Traceback (most recent call last):
-  File "/usr/bin/flask", line 33, in <module>
-    sys.exit(load_entry_point('Flask==2.0.1', 'console_scripts', 'flask')())
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 990, in main
-    cli.main(args=sys.argv[1:])
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 596, in main
-    return super().main(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
-    rv = self.invoke(ctx)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1659, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/decorators.py", line 84, in new_func
-    return ctx.invoke(f, obj, *args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 845, in run_command
-    app = DispatchingApp(info.load_app, use_eager_loading=eager_loading)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 321, in __init__
-    self._load_unlocked()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 346, in _load_unlocked
-    self._app = rv = self.loader()
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 406, in load_app
-    app = locate_app(self, import_name, None, raise_if_not_found=False)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 256, in locate_app
-    __import__(module_name)
-  File "/root/qjump-api/app.py", line 115
-    if response.ok:
-                   ^
-IndentationError: unindent does not match any outer indentation level
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:02:35] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:03:04] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:03:22,529] ERROR in app: Exception in completing order 12006: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:03:22] "POST /complete-order/12006 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:03:39] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:24:11,612] ERROR in app: Failed to fetch orders: 401 {"code":"woocommerce_rest_cannot_view","message":"Sorry, you cannot list resources.","data":{"status":401}}
-109.88.63.130 - - [07/Feb/2024 18:24:11] "GET /orders/processing HTTP/1.1" 401 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:30:18] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:30:18] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:30:18] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:30:24,136] ERROR in app: Exception in completing order 12160: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:30:24] "POST /complete-order/12160 HTTP/1.1" 500 -
-109.88.63.130 - - [07/Feb/2024 18:30:34] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:30:38] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:30:39] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:30:40] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:30:41] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:31:01] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:31:11] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:31:31] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:31:35,420] ERROR in app: Exception in completing order 12132: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:31:35] "POST /complete-order/12132 HTTP/1.1" 500 -
-109.88.63.130 - - [07/Feb/2024 18:31:38] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:31:40] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:31:41] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:31:50] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:31:53] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:32:21] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:34:09] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:34:16,604] ERROR in app: Exception in completing order 12131: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:34:16] "POST /complete-order/12131 HTTP/1.1" 500 -
-109.88.63.130 - - [07/Feb/2024 18:34:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:34:28] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:34:30] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:34:31] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:34:31] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:34:32] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:35:55] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:36:48] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:36:51,873] ERROR in app: Exception in completing order 12130: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:36:51] "POST /complete-order/12130 HTTP/1.1" 500 -
-109.88.63.130 - - [07/Feb/2024 18:37:05] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:05] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:06] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:37:08,754] ERROR in app: Exception in completing order 12130: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:37:08] "POST /complete-order/12130 HTTP/1.1" 500 -
-109.88.63.130 - - [07/Feb/2024 18:37:12] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:13] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:13] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:14] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:14] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:14] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:15] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:15] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:15] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:15] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:16] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:16] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:16] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:16] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:37:18] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:20] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:21] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:37:21] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:37:25,660] ERROR in app: Exception in completing order 12129: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:37:25] "POST /complete-order/12129 HTTP/1.1" 500 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:38:43] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:38:47] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:38:51,657] ERROR in app: Exception in completing order 12128: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:38:51] "POST /complete-order/12128 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:38:56] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:39:26] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:39:29,620] ERROR in app: Exception in completing order 12127: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:39:29] "POST /complete-order/12127 HTTP/1.1" 500 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:39:31] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-07 18:39:46,487] ERROR in app: Exception in completing order 12125: Server.emit() got an unexpected keyword argument 'broadcast'
-109.88.63.130 - - [07/Feb/2024 18:39:46] "POST /complete-order/12125 HTTP/1.1" 500 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:40:56] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:00] "POST /complete-order/12124 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:09] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:11] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:13] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:21] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:22] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:25] "POST /complete-order/12123 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:41:27] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:42:58] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:43:02] "POST /complete-order/12122 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:43:02] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:43:03] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:43:09] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:43:12] "POST /complete-order/12122 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:43:12] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:43:12] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:43:15] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:44:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:44:30] "POST /complete-order/12121 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:44:30] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:44:31] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:44:51] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:44:54] "POST /complete-order/12121 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:44:54] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:44:54] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:45:10] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:45:13] "POST /complete-order/12121 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:45:13] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:45:13] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:45:51] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:47:05] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:09] "POST /complete-order/12119 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:09] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:20] "POST /complete-order/12119 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:20] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:23] "POST /complete-order/12118 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:23] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:24] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:25] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:47:27] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:48:47] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:48:52] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:48:56] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:17] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:22] "POST /complete-order/12117 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:22] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:25] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:49] "POST /complete-order/12117 HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:49:50] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:55] "POST /complete-order/12116 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:55] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:59] "POST /complete-order/12116 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:49:59] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:03] "POST /complete-order/12116 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:03] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:04] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:05] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:06] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:06] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:09] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:10] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:10] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:10] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:10] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:13] "POST /complete-order/12116 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:13] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:16] "POST /complete-order/12115 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:16] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:24] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:24] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:25] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:25] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:50:27] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:51:18] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:22] "POST /complete-order/12114 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:22] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:25] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:27] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:51:29] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:29] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:31] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:31] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:32] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:51:32] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 18:52:12] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:52:15] "POST /complete-order/12113 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:52:15] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:52:32] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:52:37] "POST /complete-order/12112 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 18:52:37] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:07:44] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:07:47] "POST /complete-order/12111 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:07:47] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:07:48] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:07:52] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:07:55] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:07:56] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:07:57] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:02] "POST /complete-order/12111 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:02] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:02] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:02] "POST /complete-order/12111 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:03] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:03] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:03] "POST /complete-order/12111 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:03] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:03] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:06] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:09] "POST /complete-order/12110 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:09] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:09] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:08:18] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:09:54] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:09:58] "POST /complete-order/12109 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:09:58] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:09:59] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:00] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:02] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:04] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:05] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:11] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:13] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:13] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:14] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:18] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:20] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:21] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:21] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:29] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:33] "POST /complete-order/12109 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:33] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:33] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:35] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:36] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:36] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:37] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:10:39] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:10:57] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:00] "POST /complete-order/12108 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:00] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:11:01] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:02] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:02] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:03] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:04] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:06] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:11:53] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:11:59] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:12:01] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:13:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:13:32] "POST /complete-order/12107 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:13:32] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:13:33] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:13:38] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:13:43] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:14:11] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:14:16] "POST /complete-order/12107 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:14:16] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:14:16] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:14:31] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:14:34] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:14:38] "POST /complete-order/12106 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:14:38] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:14:38] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:16:51] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:17:17] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:17:20] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:17:22] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:17:28] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:17:32] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:18:42] "POST /complete-order/12105 HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:18:44] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:18:45] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:19:10] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:19:11] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:19:28] "POST /complete-order/12104 HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:19:28] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:19:28] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:19:32] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:19:35] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:23:42] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:23:49] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:23:51] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:23:52] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:24:28] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:24:35] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:24:35] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:24:35] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:24:36] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:24:36] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:43:19] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:20] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:43:22] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:22] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:23] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:25] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:52] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:52] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:53] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:53] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:54] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:56] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:43:56] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:44:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:44:31] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:44:34] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:45:07] code 400, message Bad request version ('à\x9e:x')
-109.88.63.130 - - [07/Feb/2024 19:45:07] "  üÎ{°=­06"áW`Ã¶[vùc5)ÌM?L H×`þÚXªÿ0ò¸Vå<js>"&6Ô¾mSëøüå  À+À/À,À0Ì©Ì¨ÀÀ   / 5 ÊÊ              þ º   é  yBxD2¢ñ2°;#Y¿à:x" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:45:07] code 400, message Bad request version ('6]ÿ\x96\x03â\x1b\x9cì\x15\x87¸µÎfû.£OHò\x98RÚ\x94ÇØÔ\x87MA')
-109.88.63.130 - - [07/Feb/2024 19:45:07] ": 6ulugxÇ\Qxu]÷È¿ØuwÑU¸*K  ]f3 6Y&(Þ¥jLëÅÓªwka=x³(Jæå£  À+À/À,À0Ì©Ì¨ÀÀ   / 5 Íêê            3 + )     6]ÿâì¸µÎfû.£OHòRÚÇØÔMA" HTTPStatus.BAD_REQUEST -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:45:22] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:45:27] "POST /complete-order/12103 HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:45:32] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:45:35] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:46:53] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:46:56] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:47:01] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:47:05] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:47:15] "POST /complete-order/12102 HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:47:57] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:48:10] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:48:14] "GET /orders/processing HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:51:42] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:51:47] code 400, message Bad request version ('ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01Í\x8a\x8a\x00\x00Di\x00\x05\x00\x03\x02h2\x003\x00+\x00)')
-109.88.63.130 - - [07/Feb/2024 19:51:47] ": 6M¨ù´µtB#^l  	&5ûc°Ç!sò±á*cÊ³ ÞKO¥¨@®Ñ÷O8ÙA¥²,o°iþõ#à±U  ZZÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 Í  Di  h2 3 + )" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:51:48] code 400, message Bad request version ('\x02h2\x08http/1.1\x00')
-109.88.63.130 - - [07/Feb/2024 19:51:48] "  üï+s9nDn%øC^Ó4Moµ²L¡òÚ³R5 ¾è ²#õgAY¡ÀÅ GOÈQÑçYn¶%>  ÚÚÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 zz      #     h2http/1.1 " HTTPStatus.BAD_REQUEST -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 19:56:57] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:56:59] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:57:02] code 400, message Bad request version (',\x80\x84ÓEFD\x9e[>')
-109.88.63.130 - - [07/Feb/2024 19:57:02] "  üg¯&ð°jÚN/`acó</Ù©¿ñÃY¤½9â² ^y6T°Àß·þÅE§P­ÛÌ¯²mUìÔ6%|ÅæSÛõ  À+À/À,À0Ì©Ì¨ÀÀ   / 5 jj  þ Ú     ÇÄÒ	A»Hüv·ì^>Ý +S¡2¬Zl78 °âÎÇï¹sÝy°>Dùå¨jôdÇê½OnÃM¨ç×÷ìk{^æ¹ShUúðP¾â,ÓEFD[>" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:02] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:02] ": 6bÜå­R+ÝÕgØû(Noê-?¹Æjß28l±èp< íx?Ôèv(<òG0HÒÂÌ>e¬«z2È  À+À/À,À0Ì©Ì¨ÀÀ   / 5 Íêê     Di  h2 -  + ::   h2http/1.1    " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:04] code 400, message Bad request version ('èv\x13ç¼ÀÊlx<«Ipq¹\x00/¦pz\x176\x18qA(\x7fØ-\x97Y&Di\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00-\x00\x02\x01\x01\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:04] "  üs"ÅfG0¾ìÆÓÜÈ\AUVvÔ8ÓõªN*¥Cí a5AÐvî¹´Q^Bçt¼¨?d×¦6Vk.ÇMò9ÿÃÖ  ::À+À/À,À0Ì©Ì¨ÀÀ   / 5 jj   + ÊÊÿ   #   3 + )**     èvç¼ÀÊlx<«Ipq¹ /¦pz6qA(Ø-Y&Di  h2    -  " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:05] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03§OÃi]MÈ]ûH\x99\x8c*\x18A$\x89\x8f\x9b$\x80<7àÁÛ¿ÆºS\x86Í')
-109.88.63.130 - - [07/Feb/2024 19:57:05] "  ü§OÃi]MÈ]ûH*A$$<7àÁÛ¿ÆºSÍ Ù ß@­>Ì¨Å%ºøJ¾xÀìªº," HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:06] code 400, message Bad request version ("\x9cî<(Y\x99c\x8av£¤¡'ås\x192ºwBsã\x81\x98ó\x10[È\x95£¹ÿÏ\x93ñB@\x04àZ4Üð")
-109.88.63.130 - - [07/Feb/2024 19:57:06] "  üC¯(&©Ua¬K9H ZÂ[3ýö0Q\EG ~Ë¡ÔÄ2Ç§¼ÍDÕ+ÁÈÃì>Þ5¬ÄÍ  êêÀ+À/À,À0Ì©Ì¨ÀÀ   / 5    3 + )êê     ê£pÕc;h;²¶§êïåVa![ª¶ÜwâAf   ÿ     h2http/1.1 - Di  h2    #     þ º   i  6í =ü Z~ÀY×kÛ½UÌªÑúä*J ª øÄþ´Æ3L®(é@Õ7¼¦BJG y#E¥*ÈGÉZ§ÔWmO; oÕT_ÔÊT¬Üø9¨}"î<(Ycv£¤¡'ås2ºwBsãó[È£¹ÿÏñB@àZ4Üð" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:06] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:06] "  ü§L%Tp¾=}½(P>º÷¤4ëÛN.tµïe·Ù b¦Ø^ñÂiòOûÂ¡ì{½X#)#¥æZ'q¸]  ªªÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ::            " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:12] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [07/Feb/2024 19:57:15] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01Íêê\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:15] ": 6ìtÜÉu!f»u)?È¦Á±$¥ÔÒñ§"} ×Ê|1¶öm\@TÅÚGG¶»+BXÖF³ßï²  ÚÚÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 Íêê   " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:15] code 400, message Bad request version ('\\}3+\x0f&\x8bYEÓ´ç$¯kG\x00+\x00\x07\x06JJ\x03\x04\x03\x03\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:15] " iE2 kBb¢/´#K°gcåÛUÅ)°Vóµ 4Zö°§øÇÏBÐ­Í¥Ûúì¹î7¿Ü Zõú   zzÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­zz  þ ú     4}¢º:¾|à¯ù1EgLsèÏxhlRL ÐB«F-ÓÒÝ8ûFÃMðò9WÓ7¦ÿV8¹kzåaèÌìRTTûí xÞV1pZsë§=¹qÅikìÿ	^ ¯DêòÔèLnéÞ¯ÂrìZ"$#å¥£à5®Ò5ÂB§WÛq{x|¨pçëÞa¶R2§³¢¥vv¿%Ã¿[ÊmýÊfzq¾÷w\> òýLÞ¨È¼¬Õ{Ñ1Wi¯B­;§ÛDi  h2 #           ÿ     h2http/1.1    3 + )JJ     Ð÷´HûEÑ§ú\®\}3+&YEÓ´ç$¯kG + JJ " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:15] code 400, message Bad request version ('\x0fdw×yH½\x92S\x13ë\x121¡\x86>\x0e\x93©3õ\x0eµ\x99M\x02ecÉÑÄ\x19\x8e')
-109.88.63.130 - - [07/Feb/2024 19:57:15] "  üÒxe]O¿|nZâ¼º#ÝìÐö¦ßW¾Y ¢º [±¦¥Û6ovIOza@¾¡k«è Óë(  JJÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ªª  Di  h2ÿ     þ Ú     ¥Nùýoe¯«h pþk½yJ8ºÿ¾Â- °NÜ~RmÁEJ*E¥ÈõíÈÄÿJóó¬ê@S@±­ÿøêAÜK×¿ùÊ))ô°§¯µô@r`R×¹Mæ4ÃÇÛ¯Áe]¯­6%(¾àÃmºÞg2øM.>kÜT£Ï0®É dw×yH½Së1¡>©3õµMecÉÑÄ" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:15] code 400, message Bad request version ('ßzw6xmWù°q\\ìeT¨\x92-\x04öijT{Û\x83\x16')
-109.88.63.130 - - [07/Feb/2024 19:57:15] "  üÊU6§Ø<\¡BbüÕ¬o#¶yrufôïXFÖ ¥êÙ¶Ç*oº#ÊÜBÛÔ´Ém-n×7Y+J  ººÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 úú   - þ Ú   ,  a^Dý¥.]ÅäQhè5¸UÌ­ß0[ °µóÉÎ=»¼&¼/C¦¹0BM^ÍHý$Í£¡X¼à#êáR¯unEáâdìgã"(@´©}ßzw6xmWù°q\ìeT¨-öijT{Û" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:15] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:15] "  üaËÌÛE¡lÚß+q5ÄÖíbI½lV]´Æ² ~UÞºÖ#`i­Whì3 ·µÁäÏÖêØ[ç  ÚÚÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ÊÊ      " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:15] code 400, message Bad request version ('\x18\x93ÏVAÀb')
-109.88.63.130 - - [07/Feb/2024 19:57:15] "  ü²èêÖwL®³·>ûG­1Qg[g«!Ìõåæ®ß kçfp:	ÏVAÀb" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:28] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:28] ": 6Æ©ÏbS-*Ê¸zþð·ìúÊ ü×[úAôFÙyÐK4) âUd×ª«~OüìI  ªªÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 Í**   - ÿ  þ     ÑAjTäáÜ¶¤Beÿ7gÊöDÃu[eXçÑ£ßOm ðÂzñ/¥­­¹¥a&¨BÆGºU¿¤hËòY_%±7°íÿzå 0~lp$¾bø/\Ú&¨Â¸ðÅéóêíXú*ì?B¬e£iÈÏÉü\YóÀÙ|ph°oÀ<0®ç$ØÚÝv«òE7=û`¹Ð+ÒãyÕF÷ÉXµæZÞ|Nx!3·nÂ9E µä,².CQ"½ßãj¾ yZÜh0½wfa%¹üL`|·B©þís{j"þ±»)%5@xº]J©Ù¡ªW¶   h2http/1.1          " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:28] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ô\x14Ïô{')
-109.88.63.130 - - [07/Feb/2024 19:57:28] "  üôÏô{-QÜ" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:28] code 400, message Bad request version ('\x00-\x00\x02\x01\x01\x00#\x00\x00ÿ\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 19:57:28] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x1a4÷Õ\x9aK\x8b<\x7f¡Ü\x82z,ÁC\x0e\x04ýW')
-109.88.63.130 - - [07/Feb/2024 19:57:28] "  ü¬Ò±RÃL:K&ÿ¦°tNX|úð´µ|ª»/§ |ßEíóø×Ýs	ÈÇ5¹j¨¨Eÿ¬  **À+À/À,À0Ì©Ì¨ÀÀ   / 5 zz        Di  h2 3 + )**     ÂtÙX%rxéþèsU§å±ý	Ê@kpàC -  #  ÿ         " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 19:57:28] "  ü4÷ÕK<¡Üz,ÁCýW" HTTPStatus.BAD_REQUEST -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-109.88.63.130 - - [07/Feb/2024 20:07:31] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02:\x01\x00\x026\x03\x03ÙÈ\x17gÞ¿Dì¡\x83p\x9d0\x0e®ñ!·â*ElÔ\x07\x92òÍ\x02ßÝÞG')
-109.88.63.130 - - [07/Feb/2024 20:07:31] ": 6ÙÈgÞ¿Dì¡p0®ñ!·â*ElÔòÍßÝÞG ®G¤Å." HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:07:31] code 400, message Bad request version ('\x00\x02\x01\x00\x003\x00+\x00)')
-109.88.63.130 - - [07/Feb/2024 20:07:31] "  ü2ÞèÕ«ÊðqwSt¦µ¶]IÌ$!iCk²" ÛÆñWÄ´9xæÆf8WdÆ6?¸Ú]&E5  jjÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ::           Di  h2 -  + ÚÚ    3 + )" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:07:31] code 400, message Bad request version ('7')
-109.88.63.130 - - [07/Feb/2024 20:07:31] " 5ÿ¸6Éü»½?Ùä]0ºÐÁÈñð 4Â:Ñ/k© 7" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:07:31] code 400, message Bad request version ("°ðZ\x8f\x92×4Ø¹Í^Õ/ÿÆ'Ým|´Æ?Ó\x9c-½\x9e´L\x8aÂu\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00")
-109.88.63.130 - - [07/Feb/2024 20:07:31] "  üB=©î¼­7YG:Ë]Ò)·zbì¨&ôÖlJîU ·jÞC/£÷ìv´?÷»ÞóÕùÇi@÷=  ªªÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ::         3 + )     °ðZ×4Ø¹Í^Õ/ÿÆ'Ým|´Æ?Ó-½´LÂu       " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:08:25] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\xadZZ\x00\x00\x00\x12\x00\x00\x00\x17\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 20:08:25] " ú2PûrëñÁ³zLËV¸UºB½¢"	«ë© ê ¸ÛwLrwZGÒ^c>WFKoQÀlçDú  ÚÚÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­ZZ         " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:08:25] code 400, message Bad request version ('ðÎ\x91ÿ+Ñó\x96\x17¹»\x8cOÇâ°ä2¨')
-109.88.63.130 - - [07/Feb/2024 20:08:25] " Ý¿Óª å®T¸´ìCú¶%Îê]q)q» ÊÉónQþðúCÌ2©ç²J¯÷÷·[bÏß_/ÆÌ  jjÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­zz   + ÚÚþ ú   ¡  £~@ïboõöº;ôÀ	5ôëýöñ=Ô9Ö7V ÐFz=3.ã_<¯Å6tg¶ðÎÿ+Ñó¹»OÇâ°ä2¨" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:08:25] code 400, message Bad request version ('\x00\x02\x01\x00\x00')
-109.88.63.130 - - [07/Feb/2024 20:08:25] "  ü­*±×Lz+Á[èãÁÑ²¸Åä/ZêC0 1oqÊüMhoz\÷ÎÈbÀ	M<Ê*­±  À+À/À,À0Ì©Ì¨ÀÀ   / 5      h2http/1.1      Di  h2 3 + )zz     ¾9%ÓLäñQpq[ê°»R¡1:AÖQ\#´"       " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:08:25] code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01Í\x8a\x8a\x00\x00\x00')
-109.88.63.130 - - [07/Feb/2024 20:08:25] ": 6B4kákæ£24ßÎ/ð5pQ¼qVk^Õâ)^OÕ NÕ:NS	ø¬gJ­¦lÃï>LIJ$<ÝcZÛ!  ªªÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 Í   " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:08:26] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
-109.88.63.130 - - [07/Feb/2024 20:08:26] ": 6;1 jë ÊÐìRuÐÂ2»XFËAöõ»M]y T¨X÷¬Üm@p>iØã Rªæ÷¹$½æ  À+À/À,À0Ì©Ì¨ÀÀ   / 5 ÍÚÚ   + úú #      3 + )ZZ     ¥Wiê°¶ÃSÂ\Ò×ÇAÀVx"äÙà­ñ- - Di  h2   h2http/1.1         ÿ  þ   9  óOøÒ9ÿ³¸¹-&òwqÐ3z$¯q¥éñ²~R ðµ/½ÒTy$ìf'Õµ42ÉPÒßü+÷é¾K×ù.#±.%PaüÎ××M¥y~{»TE·ùÑàÏðÇwlØBwåñGßÀÏÑ´`~vãêí§½ôÑdº&2þ"BÓ1HSH3Ì0ÑÇ}´¡×^û'otîà¹OHUC0#¡?­	P4ÍßVaÐµ[Êà5[&.¨©&ý\î_ XDyDBi§4Ã$Î3#¨¼"úé-N¬"åeµýA³±}*[.;Ûý+cK          " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [07/Feb/2024 20:08:26] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03©¥ýº1Ûù»')
-109.88.63.130 - - [07/Feb/2024 20:08:26] "  ü©¥ýº1Ûù»" HTTPStatus.BAD_REQUEST -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [07/Feb/2024 20:08:31] "GET /orders/processing HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:12:34] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 00:12:38] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 00:12:38] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:15:04] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:15:06] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 00:15:10] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:35:25] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:36:10] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:38:15] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:38:26] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 00:38:35] "GET /orders/processing HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-08 00:43:28,696] ERROR in app: Failed to fetch orders: 502 <html>
-<head><title>502 Bad Gateway</title></head>
-<body>
-<center><h1>502 Bad Gateway</h1></center>
-<hr><center>cloudflare</center>
-</body>
-</html>
-
-109.88.63.130 - - [08/Feb/2024 00:43:28] "GET /orders/processing HTTP/1.1" 502 -
-109.88.63.130 - - [08/Feb/2024 00:43:33] "GET /orders/processing HTTP/1.1" 502 -
-109.88.63.130 - - [08/Feb/2024 00:43:57] "GET /orders/processing HTTP/1.1" 502 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 00:44:27] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 00:44:43] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:07:23] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:07:40] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:08:36] "GET /orders/completed HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:08:46] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:09:43] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:10:02] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:10:15] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:10:21] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:10:47] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:12:49] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:12:58] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:13:21] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:13:34] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:13:44] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:48:33] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:49:11] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:49:18] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:49:27] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:51:42] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:51:49] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:52:03] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:52:09] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:53:42] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:54:12] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:55:15] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:55:20] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:55:32] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:55:38] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 01:57:28] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 01:57:41] "GET /orders/processing HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:04:22] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:04:26] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:04:29] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:24:17] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:24:19] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:24:30] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:24:42] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:24:49] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:24:56] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:27:29] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:30:09] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:30:12] "POST /complete-order/12092 HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:30:23] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:30:43] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:30:47] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:30:49] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:30:50] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:34:06] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:35:21] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:38:09] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:10] "GET /orders/processing?shop=Snack HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:12] "GET /orders/processing?shop=Restaurante%20Alvo HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:13] "GET /orders/processing?shop=Brasserie HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:13] "GET /orders/processing?shop=Eventos%20Sociais HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:14] "GET /orders/processing?shop=Pub HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:14] "GET /orders/processing?shop=Pizzaria HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:15] "GET /orders/processing?shop=Lion%20Food%20Market HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:15] "GET /orders/processing?shop=Evento%20Esportivo HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:16] "GET /orders/processing?shop=Eventos%20Sociais HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:16] "GET /orders/processing?shop=Brasserie HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:16] "GET /orders/processing?shop=Brasserie HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:17] "GET /orders/processing?shop=Restaurante%20Alvo HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:17] "GET /orders/processing?shop=Snack HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:38:17] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:39:03] "GET /orders/processing/snack HTTP/1.1" 404 -
-109.88.63.130 - - [08/Feb/2024 02:39:03] "GET /favicon.ico HTTP/1.1" 404 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-[2024-02-08 02:42:11,890] ERROR in app: Exception on /orders/processing/snack [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 399, in decorated_function
-    rv = self._call_fn(f, *args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 175, in _call_fn
-    return ensure_sync(fn)(*args, **kwargs)
-  File "/root/qjump-api/app.py", line 130, in get_processing_orders_by_shop
-    return get_orders_by_status_and_shop('processing', shop_name)
-  File "/root/qjump-api/app.py", line 139, in get_orders_by_status_and_shop
-    if response.status_code != 200:
-AttributeError: 'tuple' object has no attribute 'status_code'
-109.88.63.130 - - [08/Feb/2024 02:42:11] "GET /orders/processing/snack HTTP/1.1" 500 -
-[2024-02-08 02:42:15,470] ERROR in app: Exception on /orders/processing/snack [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 399, in decorated_function
-    rv = self._call_fn(f, *args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 175, in _call_fn
-    return ensure_sync(fn)(*args, **kwargs)
-  File "/root/qjump-api/app.py", line 130, in get_processing_orders_by_shop
-    return get_orders_by_status_and_shop('processing', shop_name)
-  File "/root/qjump-api/app.py", line 139, in get_orders_by_status_and_shop
-    if response.status_code != 200:
-AttributeError: 'tuple' object has no attribute 'status_code'
-109.88.63.130 - - [08/Feb/2024 02:42:15] "GET /orders/processing/snack HTTP/1.1" 500 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
-Traceback (most recent call last):
-  File "/usr/bin/flask", line 33, in <module>
-    sys.exit(load_entry_point('Flask==2.0.1', 'console_scripts', 'flask')())
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 990, in main
-    cli.main(args=sys.argv[1:])
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 596, in main
-    return super().main(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
-    rv = self.invoke(ctx)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1659, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/decorators.py", line 84, in new_func
-    return ctx.invoke(f, obj, *args, **kwargs)
-  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
-    return __callback(*args, **kwargs)
-  File "/usr/lib/python3/dist-packages/flask/cli.py", line 849, in run_command
-    run_simple(
-  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 1010, in run_simple
-    inner()
-  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 950, in inner
-    srv = make_server(
-  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 782, in make_server
-    return ThreadedWSGIServer(
-  File "/usr/lib/python3/dist-packages/werkzeug/serving.py", line 688, in __init__
-    super().__init__(server_address, handler)  # type: ignore
-  File "/usr/lib/python3.10/socketserver.py", line 452, in __init__
-    self.server_bind()
-  File "/usr/lib/python3.10/http/server.py", line 137, in server_bind
-    socketserver.TCPServer.server_bind(self)
-  File "/usr/lib/python3.10/socketserver.py", line 466, in server_bind
-    self.socket.bind(self.server_address)
-OSError: [Errno 98] Address already in use
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-109.88.63.130 - - [08/Feb/2024 02:44:49] "GET /orders/processing/snack HTTP/1.1" 404 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:45:05] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:45:29] "GET /orders/processing?shop=Lion%20Food%20Market HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:45:32] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:45:34] "GET /orders/processing?shop=Snack HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:45:35] "GET /orders/processing?shop=Restaurante%20Alvo HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:45:35] "GET /orders/processing?shop=Brasserie HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:45:35] "GET /orders/processing?shop=Pub HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:45:36] "GET /orders/processing?shop=Eventos%20Sociais HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:47:55] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:47:56] "GET /orders/processing?shop=Snack HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:47:57] "GET /orders/processing?shop=Restaurante%20Alvo HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:47:58] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:48:05] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:49:52] "GET /orders/processing?shop=Evento%20Esportivo HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:49:53] "GET /orders/processing?shop=Lion%20Food%20Market HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:49:53] "GET /orders/processing?shop=Lion%20Food%20Market HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:49:53] "GET /orders/processing?shop=Lion%20Food%20Market HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:49:53] "GET /orders/processing?shop=Lion%20Food%20Market HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:49:54] "GET /orders/processing?shop=Pizzaria HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:49:58] "POST /complete-order/12091 HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:52:52] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:53:02] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 02:53:10] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 02:53:15] "POST /complete-order/12090 HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-109.88.63.130 - - [08/Feb/2024 15:41:40] code 400, message Bad request version ('\x86a\x1aa§\x11C\x00§\x8eÕ\x9a_\x00-\x00\x02\x01\x01\x00\x12\x00\x00\x00')
-109.88.63.130 - - [08/Feb/2024 15:41:40] " Õ°kx¢cY°ªù¥·oùÚ÷ñh¤nÚÓÉ6R S½÷°¼«ÞOÊ8µþÚJOOÅPM:@8ån  JJÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­êê      #   3 + )::     .â{¯%Å½¬jZ,ÚË`	aa§C §Õ_ -     " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [08/Feb/2024 15:41:41] code 400, message Bad request version ('Î0Ù«=$é')
-109.88.63.130 - - [08/Feb/2024 15:41:41] " >Å°·snÝbf.+ù°`SK±±¶§b2[6 ª~"ç×/çXÎ0Ù«=$é" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [08/Feb/2024 15:41:54] code 400, message Bad request version ('\x00\x02\x01\x00\x003\x00+\x00)')
-109.88.63.130 - - [08/Feb/2024 15:41:54] "  üÅ¤?_%zÜO9ê²OGwvØ¥þ®X´sÔ ÷¥ìõ(^Xåuú;Aágëé¶rP[vÌ8íND a  ªªÀ+À/À,À0Ì©Ì¨ÀÀ   / 5   ÿ         3 + )" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [08/Feb/2024 15:41:54] code 400, message Bad request version ('K\x8b6Ê\x1bAiH×._E±\x15÷Òï\x8a®\x9a\x92±¨xR±ûu\x12û\x87p\x00')
-109.88.63.130 - - [08/Feb/2024 15:41:54] "  ü;h¯5KVjj§ûNøÇz=¯ExGÐêD! ÙQõ·ÊéÒ ÅÌlm&y1&3Hì³Ê&  À+À/À,À0Ì©Ì¨ÀÀ   / 5 **   + ªª          #   3 + )     K6ÊAiH×._E±÷Òï®±¨xR±ûuûp " HTTPStatus.BAD_REQUEST -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 15:42:13] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 15:42:14] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 15:42:14] "GET /orders/processing HTTP/1.1" 200 -
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-109.88.63.130 - - [08/Feb/2024 15:42:17] "GET /orders/completed HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 15:42:26] "GET /orders/processing HTTP/1.1" 200 -
-109.88.63.130 - - [08/Feb/2024 15:42:34] "GET /orders/processing HTTP/1.1" 200 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-08 15:48:08,795] ERROR in app: Exception on /orders/processing [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 399, in decorated_function
-    rv = self._call_fn(f, *args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 175, in _call_fn
-    return ensure_sync(fn)(*args, **kwargs)
-  File "/root/qjump-api/app.py", line 46, in get_processing_orders
-    return get_orders_by_status('processing')
-  File "/root/qjump-api/app.py", line 64, in get_orders_by_status
-    simplified_orders = simplify_orders(orders)
-TypeError: simplify_orders() missing 1 required positional argument: 'sku_prefix_name_mapping'
-109.88.63.130 - - [08/Feb/2024 15:48:08] "GET /orders/processing HTTP/1.1" 500 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-/usr/lib/python3/dist-packages/urllib3/connectionpool.py:1020: InsecureRequestWarning: Unverified HTTPS request is being made to host 'qjump.online'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(
-[2024-02-08 15:49:06,068] ERROR in app: Exception on /orders/processing [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 2070, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1515, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 176, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1513, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/usr/lib/python3/dist-packages/flask/app.py", line 1499, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 399, in decorated_function
-    rv = self._call_fn(f, *args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/flask_caching/__init__.py", line 175, in _call_fn
-    return ensure_sync(fn)(*args, **kwargs)
-  File "/root/qjump-api/app.py", line 46, in get_processing_orders
-    return get_orders_by_status('processing')
-  File "/root/qjump-api/app.py", line 64, in get_orders_by_status
-    simplified_orders = simplify_orders(orders)
-TypeError: simplify_orders() missing 1 required positional argument: 'sku_prefix_name_mapping'
-109.88.63.130 - - [08/Feb/2024 15:49:06] "GET /orders/processing HTTP/1.1" 500 -
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://194.31.150.176:7000/ (Press CTRL+C to quit)
-109.88.63.130 - - [08/Feb/2024 15:50:54] "GET /orders HTTP/1.1" 404 -
-109.88.63.130 - - [08/Feb/2024 15:50:55] "GET /favicon.ico HTTP/1.1" 404 -
-109.88.63.130 - - [08/Feb/2024 15:51:04] code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x12\x00\x00\x00')
-109.88.63.130 - - [08/Feb/2024 15:51:04] ": 6KÕ£	ÈÝÁÇEà$¦JêPÔÐzC7ÙÇËnÁ¼j  EØÁ"·y@õÏÀCLï:{ýâm÷X	eÓ|T  ººÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 Íºº  Di  h2    + ::         ÿ        h2http/1.1    " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [08/Feb/2024 15:51:04] code 400, message Bad request version ('g\x12Ì\x0fo\x02çHÕóTö¯@[¯N¡qø\x91ßb¬\x97?Ö«4»\x8e!\x00#\x00\x00\x00')
-109.88.63.130 - - [08/Feb/2024 15:51:04] " //©Ô7kSµ`Òâ²¢!êÜ"d?v'âÓ $Å1FÄ  ç§PUÒå.<áßéz«v¶±Ôê=  ÊÊÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ­ºº     h2http/1.1      Di  h2    3 + )zz     gÌoçHÕóTö¯@[¯N¡qøßb¬?Ö«4»! #   " HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [08/Feb/2024 15:51:04] code 400, message Bad request syntax ('\x16\x03\x01\x02\x1a\x01\x00\x02\x16\x03\x03Ã;ft\x0f^Æ\x0e\x8cè0\x00\x18\x95\x11>\x03÷')
-109.88.63.130 - - [08/Feb/2024 15:51:04] " Ã;ft^Æè0 >÷" HTTPStatus.BAD_REQUEST -
-109.88.63.130 - - [08/Feb/2024 15:51:04] code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93')
-109.88.63.130 - - [08/Feb/2024 15:51:04] "  ü¥³ÛvÄDC#>pÍfº«Eqðü_Â±ñ ¾púù)7aÖmrÚÔ´ì''H¤wCñ¨ÂbÂ  zzÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 " HTTPStatus.BAD_REQUEST -
