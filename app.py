@@ -113,7 +113,10 @@ def get_orders_by_status(status, restaurant_name=None):
 
             if restaurant_name:
                 # base_query += " AND max(case when pm.meta_key = '_store_name' then pm.meta_value end) = %s"
-                base_query += " AND pm.meta_key = '_store_name' AND pm.meta_value = %s"
+                # base_query += " AND pm.meta_key = '_store_name' AND pm.meta_value = %s"
+                base_query += (" AND pm.post_id IN "
+                               "  (SELECT pm1.post_id FROM wp_postmeta pm1 "
+                               "    WHERE pm1.meta_key = '_store_name' AND pm1.meta_value = %s ) ")
                 params.append(restaurant_name)
 
             base_query += " GROUP BY p.ID"

@@ -32,7 +32,12 @@ SELECT p.ID as order_id, p.post_date as date_created, p.post_status as status,
 FROM wp_posts p
 LEFT JOIN wp_postmeta pm ON p.ID = pm.post_id
 WHERE p.post_type = 'shop_order'
-AND pm.meta_key = '_store_name' AND pm.meta_value = %s
+#AND pm.meta_key = '_store_name' AND pm.meta_value = 'Snack'
+AND pm.post_id IN (
+            SELECT pm1.post_id
+            FROM wp_postmeta pm1
+            WHERE pm1.meta_key = '_store_name' AND pm1.meta_value = 'Snack'
+        )
 AND p.post_status = 'wc-processing'
 GROUP BY p.ID;
 
@@ -41,5 +46,5 @@ GROUP BY p.ID;
 SELECT p.ID as order_id, p.post_date as date_created, p.post_status as status, pm.meta_value  as _store_name
 FROM wp_posts p LEFT JOIN wp_postmeta pm ON p.ID = pm.post_id
 WHERE p.post_type = 'shop_order'
-AND pm.meta_key = '_store_name' AND pm.meta_value = %s
+AND pm.meta_key = '_store_name' AND pm.meta_value = 'Snack'
 AND p.post_status = 'wc-processing';
