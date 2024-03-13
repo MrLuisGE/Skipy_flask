@@ -1,5 +1,5 @@
 # WooCommerce API details
-WC_API_URL = 'https://qjump.online/wp-json/wc/v3/'
+WC_API_URL = 'https://qjump.online/wp-json/wc/v3'
 CONSUMER_KEY = 'ck_3f8a3dd06b936ae126b5ba3dc97b8f01e9402461'
 CONSUMER_SECRET = 'cs_e7e7df6806379fc54f49d2a19c0015a256fbc5fc'
 

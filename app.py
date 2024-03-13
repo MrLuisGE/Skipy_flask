@@ -27,7 +27,7 @@ cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT':
 cred = credentials.Certificate("/root/qjump-api/my-first-project-5e08d-firebase-adminsdk-rpwps-b8ad93251d.json")
 firebase_admin.initialize_app(cred)
 
-WC_API_URL = 'https://qjump.online/wp-json/wc/v3/'
+WC_API_URL = 'https://qjump.online/wp-json/wc/v3'
 CONSUMER_KEY = 'ck_b6d4bab7af943dd44fab3902735281511151df20'
 CONSUMER_SECRET = 'cs_b70925c86fe66dcc3b24108104240ba829ee75b8'
 SECRET_KEY = '27072001'
@@ -257,7 +257,7 @@ def get_store_refunded_orders(store_name=None):
 @app.route('/prepare-order/<int:order_id>', methods=['POST'])
 def prepare_order(order_id):
     data_payload = {'status': 'wc-preparing'}
-    response = requests.put(f"{WC_API_URL}orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
+    response = requests.put(f"{WC_API_URL}/orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
 
     if response.ok:
         # Your logic for when order status change is successful
@@ -278,7 +278,7 @@ def ready_order(order_id):
     data_payload = {'status': 'wc-ready'}  # Use the correct status slug for "ready" as per your WC setup
 
     # Make the request to the WooCommerce API to update the order status
-    response = requests.put(f"{WC_API_URL}orders/{order_id}",
+    response = requests.put(f"{WC_API_URL}/orders/{order_id}",
                             auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
                             json=data_payload,
                             verify=False)  # It's better to handle SSL properly rather than setting verify to False
@@ -300,7 +300,7 @@ def ready_order(order_id):
 @app.route('/complete-order/<int:order_id>', methods=['POST'])
 def complete_order(order_id):
     data_payload = {'status': 'completed'}
-    response = requests.put(f"{WC_API_URL}orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY,
+    response = requests.put(f"{WC_API_URL}/orders/{order_id}", auth=HTTPBasicAuth(CONSUMER_KEY,
                                                                                  CONSUMER_SECRET), json=data_payload, verify=False)
     if response.ok:
         cache.delete('processing_orders')
@@ -358,7 +358,7 @@ def get_order_stripe_charge_id(order_id):
 
 def update_order_status(order_id, status):
     data_payload = {'status': 'refunded' if status == 'refunded' else status}
-    response = requests.put(f"{WC_API_URL}orders/{order_id}",
+    response = requests.put(f"{WC_API_URL}/orders/{order_id}",
                             auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
                             json=data_payload,
                             verify=False)
@@ -489,7 +489,7 @@ def fetch_wordpress_users(user_id=None):
 
 @app.route('/products', methods=['GET'])
 def get_all_product_details():
-    response = requests.get(f"{WC_API_URL}products", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
+    response = requests.get(f"{WC_API_URL}/products", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
 
     if response.ok:
         return jsonify(response.json())
@@ -499,7 +499,7 @@ def get_all_product_details():
 
 @app.route('/product/<int:product_id>', methods=['GET'])
 def get_product_details(product_id):
-    response = requests.get(f"{WC_API_URL}products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
+    response = requests.get(f"{WC_API_URL}/products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
 
     if response.ok:
         return jsonify(response.json())
@@ -508,7 +508,7 @@ def get_product_details(product_id):
 
 @app.route('/product/<int:product_id>/details', methods=['GET'])
 def get_product_image_price(product_id):
-    response = requests.get(f"{WC_API_URL}products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
+    response = requests.get(f"{WC_API_URL}/products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
 
     if response.ok:
         product_data = response.json()
@@ -527,7 +527,7 @@ def update_product_price(product_id):
         return jsonify({'error': 'New price is required'}), 400
 
     data_payload = {'regular_price': str(new_price)}
-    response = requests.put(f"{WC_API_URL}products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
+    response = requests.put(f"{WC_API_URL}/products/{product_id}", auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), json=data_payload, verify=False)
 
     if response.ok:
         return jsonify({'success': 'Product price updated'})
@@ -552,7 +552,7 @@ def update_product_image(product_id):
 
     # Upload the image to WordPress/WooCommerce
     with open(filepath, 'rb') as img:
-        media_response = requests.post(f"{WC_API_URL}media",
+        media_response = requests.post(f"{WC_API_URL}/media",
                                        auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
                                        files={'file': img},
                                        headers={'Content-Disposition': f'attachment; filename={filename}'})
@@ -565,7 +565,7 @@ def update_product_image(product_id):
     image_id = media_response_data['id']
 
     # Now update the product with the new image ID
-    update_response = requests.put(f"{WC_API_URL}products/{product_id}",
+    update_response = requests.put(f"{WC_API_URL}/products/{product_id}",
                                    auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
                                    json={'images': [{'id': image_id}]},
                                    verify=False)
