@@ -17,6 +17,12 @@ sku_prefix_name_mapping = {
     'eventoesportivo-': 'Evento Esportivo',
 }
 
+# Websocket connection with curl
+
+curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" -H "Host: findforme.be" -H "Origin: https://findforme.be" -H "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" -H "Sec-WebSocket-Version: 13" https://findforme.be/socket.io/?EIO=4&transport=websocket
+
+curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" -H "Host: 194.31.150.176" -H "Origin: http://194.31.150.176" -H "Sec-WebSocket-Key: SGVsbG8sIHdvcmxkIQ==" -H "Sec-WebSocket-Version: 13" http://194.31.150.176:7000/socket.io/?EIO=4&transport=websocket
+
 # QUERIES
 
 # 1) Find processing orders from Snack:
