@@ -38,7 +38,7 @@ API_SEC_KEY = 'sk_test_51OX5FkH6esboORTBVLyd5v5sA7lMgDMQstDExbujgMdHvQwAHDJvxH1z
 
 @app.before_request
 def require_api_key():
-    open_endpoints = ['/']
+    open_endpoints = ['/', '/api']
     if request.method == 'OPTIONS' or request.path in open_endpoints:
         return  # Skip API key check for OPTIONS requests and open endpoints
 
@@ -682,7 +682,7 @@ def get_sort_asc_desc(my_request):
     return sort_param
 
 
-####### SocketIO event handlers
+# ===================== SocketIO event handlers =====================
 
 # @socketio.on('connect', namespace='/ws')  # TODO CHECK WS x WSS
 @socketio.on('connect')
