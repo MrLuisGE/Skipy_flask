@@ -51,11 +51,11 @@ def require_api_key():
 
 @app.route('/api')
 def home():
-    print(f"####### ENDPOINT CALLED: home/api on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api on {datetime.now()}")
     return jsonify({'message': f'server running on {datetime.now()}'})
 
 
-@app.route('/webhook', methods=['POST'])
+@app.route('/api/webhook', methods=['POST'])
 def handle_webhook():
     data = request.json
     print("####### Received webhook wordpress data:", data)
@@ -257,19 +257,19 @@ def fetch_products_for_order(cursor, order_id, products_list):
         products_list.append(product)
 
 
-@app.route('/orders', methods=['GET'])
-@app.route('/<store_name>/orders', methods=['GET'])
+@app.route('/api/orders', methods=['GET'])
+@app.route('/api/orders/<store_name>', methods=['GET'])
 def get_all_store_orders(store_name=None):
-    print(f"####### ENDPOINT CALLED: /<store_name>/orders on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/orders/<store_name> on {datetime.now()}")
     sort_order = get_sort_asc_desc(request)
     all_orders = get_orders_by_status(None, store_name, sort_order)
     return jsonify(all_orders)
 
 
-@app.route('/orders/open', methods=['GET'])
-@app.route('/<store_name>/orders/open', methods=['GET'])
+@app.route('/api/orders/open', methods=['GET'])
+@app.route('/api/orders/<store_name>/open', methods=['GET'])
 def get_store_open_orders(store_name=None):
-    print(f"####### ENDPOINT CALLED: /<store_name>/orders/open on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/orders/<store_name>/open on {datetime.now()}")
     sort_order = get_sort_asc_desc(request)
     processing_orders = get_orders_by_status('wc-processing', store_name, sort_order)
     preparing_orders = get_orders_by_status('wc-preparing', store_name, sort_order)
@@ -278,46 +278,46 @@ def get_store_open_orders(store_name=None):
     return jsonify(open_orders)
 
 
-@app.route('/orders/processing', methods=['GET'])
-@app.route('/<store_name>/orders/processing', methods=['GET'])
+@app.route('/api/orders/processing', methods=['GET'])
+@app.route('/api/orders/<store_name>/processing', methods=['GET'])
 def get_store_processing_orders(store_name=None):
-    print(f"####### ENDPOINT CALLED: /<store_name>/orders/processing on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/orders/<store_name>/processing on {datetime.now()}")
     sort_order = get_sort_asc_desc(request)
     processing_orders = get_orders_by_status('wc-processing', store_name, sort_order)
     return jsonify(processing_orders)
 
 
-@app.route('/orders/preparing', methods=['GET'])
-@app.route('/<store_name>/orders/preparing', methods=['GET'])
+@app.route('/api/orders/preparing', methods=['GET'])
+@app.route('/api/orders/<store_name>/preparing', methods=['GET'])
 def get_store_preparing_orders(store_name=None):
-    print(f"####### ENDPOINT CALLED: /<store_name>/orders/preparing on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/orders/<store_name>/preparing on {datetime.now()}")
     sort_order = get_sort_asc_desc(request)
     preparing_orders = get_orders_by_status('wc-preparing', store_name, sort_order)
     return jsonify(preparing_orders)
 
 
-@app.route('/orders/ready', methods=['GET'])
-@app.route('/<store_name>/orders/ready', methods=['GET'])
+@app.route('/api/orders/ready', methods=['GET'])
+@app.route('/api/orders/<store_name>/ready', methods=['GET'])
 def get_store_ready_orders(store_name=None):
-    print(f"####### ENDPOINT CALLED: /<store_name>/orders/ready on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/orders/<store_name>/ready on {datetime.now()}")
     sort_order = get_sort_asc_desc(request)
     ready_orders = get_orders_by_status('wc-ready', store_name, sort_order)
     return jsonify(ready_orders)
 
 
-@app.route('/orders/completed', methods=['GET'])
-@app.route('/<store_name>/orders/completed', methods=['GET'])
+@app.route('/api/orders/completed', methods=['GET'])
+@app.route('/api/orders/<store_name>/completed', methods=['GET'])
 def get_store_completed_orders(store_name=None):
-    print(f"####### ENDPOINT CALLED: /<store_name>/orders/completed on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/orders/<store_name>/completed on {datetime.now()}")
     sort_order = 'DESC'  # get_sort_asc_desc(request)
     completed_orders = get_orders_by_status('wc-completed', store_name, sort_order)
     return jsonify(completed_orders)
 
 
-@app.route('/orders/refunded', methods=['GET'])
-@app.route('/<store_name>/orders/refunded', methods=['GET'])
+@app.route('/api/orders/refunded', methods=['GET'])
+@app.route('/api/orders/<store_name>/refunded', methods=['GET'])
 def get_store_refunded_orders(store_name=None):
-    print(f"####### ENDPOINT CALLED: /<store_name>/orders/refunded on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/orders/<store_name>/refunded on {datetime.now()}")
     sort_order = get_sort_asc_desc(request)
     refunded_orders = get_orders_by_status('wc-refunded', store_name, sort_order)
     return jsonify(refunded_orders)
@@ -326,7 +326,7 @@ def get_store_refunded_orders(store_name=None):
 # Change the order status to "preparing"
 @app.route('/prepare-order/<int:order_id>', methods=['POST'])
 def prepare_order(order_id):
-    print(f"####### ENDPOINT CALLED: /prepare-order/<int:order_id> on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/prepare-order/<int:order_id> on {datetime.now()}")
     data_payload = {'status': 'preparing'}  # preparing is not a WordPress status, it is a custom status
     response = requests.put(f"{WC_API_URL}/orders/{order_id}",
                             auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
@@ -344,7 +344,7 @@ def prepare_order(order_id):
 
 @app.route('/mark-ready/<int:order_id>', methods=['POST'])
 def mark_order_as_ready(order_id):
-    print(f"####### ENDPOINT CALLED: /mark-ready/{order_id} on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/mark-ready/{order_id} on {datetime.now()}")
 
     data_payload = {'status': 'ready'}  # preparing is not a WordPress status, it is a custom status
     response = requests.put(f"{WC_API_URL}/orders/{order_id}",
@@ -369,7 +369,7 @@ def complete_order(order_id):
         return jsonify({'message': 'Success'}), 200
 
     if request.method == 'POST':
-        print(f"####### ENDPOINT CALLED: /complete-order/{order_id} on {datetime.now()}")
+        print(f"####### ENDPOINT CALLED: /api/complete-order/{order_id} on {datetime.now()}")
         data_payload = {'status': 'completed'}
         response = requests.put(f"{WC_API_URL}/orders/{order_id}",
                                 auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
@@ -448,7 +448,7 @@ def update_order_status(order_id, status):
 
 @app.route('/refund-order/<int:order_id>', methods=['POST'])
 def refund_order(order_id):
-    print(f"####### ENDPOINT CALLED: /refund-order/<int:order_id> on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/refund-order/<int:order_id> on {datetime.now()}")
     if not authenticate(request):
         return jsonify({'error': 'Authentication failed'}), 403
 
@@ -468,9 +468,9 @@ def refund_order(order_id):
         return jsonify({'error': 'Failed to update order status in WordPress'}), 500
 
 
-@app.route('/user-shop-association', methods=['GET'])
+@app.route('/api/user-shop-association', methods=['GET'])
 def user_shop_association():
-    print(f"####### ENDPOINT CALLED: /user-shop-association on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/user-shop-association on {datetime.now()}")
     user_id = request.args.get('id')
     if not user_id:
         return jsonify({'error': 'User ID is required'}), 400
@@ -497,15 +497,15 @@ def user_shop_association():
     return jsonify({'shop_name': shop_name})
 
 
-@app.route('/user-data', methods=['GET'])
+@app.route('/api/user-data', methods=['GET'])
 def get_user_data():
-    print(f"####### ENDPOINT CALLED: /user-data on {datetime.now()}")
-    user_id = request.args.get('id')  # User ID is optional; if not provided, fetch data for all users.
+    print(f"####### ENDPOINT CALLED: /api/user-data on {datetime.now()}")
+    user_id = request.args.get('username')  # User ID is optional; if not provided, fetch data for all users.
     users_data = fetch_wordpress_users(user_id)
     return jsonify(users_data)
 
 
-def fetch_wordpress_users(user_id=None):
+def fetch_wordpress_users(username=None):
     connection = pymysql.connect(host='localhost',
                                  user='wordpress',
                                  password='admin123',
@@ -515,17 +515,17 @@ def fetch_wordpress_users(user_id=None):
     users = []
     try:
         with connection.cursor() as cursor:
-            if user_id:
-                # Fetch user ID, login, email, and capabilities for a specific user.
+            if username:
+                # Fetch user details for a specific username.
                 sql = """
                     SELECT u.ID, u.user_login, u.user_email, m.meta_value as capabilities 
                     FROM wp_users u 
                     LEFT JOIN wp_usermeta m ON u.ID = m.user_id AND m.meta_key = 'wp_capabilities'
-                    WHERE u.ID = %s
+                    WHERE u.user_login = %s
                 """
-                cursor.execute(sql, (user_id,))
+                cursor.execute(sql, (username,))
             else:
-                # Fetch user ID, login, email, and capabilities for all users.
+                # Fetch details for all users if no username is specified.
                 sql = """
                     SELECT u.ID, u.user_login, u.user_email, m.meta_value as capabilities 
                     FROM wp_users u 
@@ -537,11 +537,9 @@ def fetch_wordpress_users(user_id=None):
 
             for user in users_basic_info:
                 user_id = user['ID']
-
-                # Extracting the user's role from the serialized PHP capabilities array
                 roles = []
+
                 if user['capabilities']:
-                    # Deserialize the PHP serialized capabilities to extract user roles.
                     try:
                         capabilities = phpserialize.loads(user['capabilities'].encode(), decode_strings=True)
                         roles = [role for role, granted in capabilities.items() if granted]
@@ -549,14 +547,12 @@ def fetch_wordpress_users(user_id=None):
                         print(f"Error deserializing capabilities for user {user_id}: {e}")
                         roles = ['No Role Assigned']
 
-                # Fetch the shop association directly from the user's metadata.
                 cursor.execute(
                     "SELECT meta_value FROM wp_usermeta WHERE user_id = %s AND meta_key = 'shop_association'",
                     (user_id,))
                 result = cursor.fetchone()
                 shop_name = result['meta_value'] if result else 'No Shop Assigned'
 
-                # Append user details, including role and shop name.
                 users.append({
                     'id': user_id,
                     'username': user['user_login'],
@@ -564,15 +560,16 @@ def fetch_wordpress_users(user_id=None):
                     'role': roles[0] if roles else 'No Role Assigned',
                     'shop': shop_name
                 })
+
     finally:
         connection.close()
 
     return users
 
 
-@app.route('/products', methods=['GET'])
+@app.route('/api/products', methods=['GET'])
 def get_all_product_details():
-    print(f"####### ENDPOINT CALLED: /products on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/products on {datetime.now()}")
     response = requests.get(f"{WC_API_URL}/products",
                             auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
 
@@ -582,9 +579,9 @@ def get_all_product_details():
         return jsonify({'error': 'Failed to fetch product details'}), response.status_code
 
 
-@app.route('/product/<int:product_id>', methods=['GET'])
+@app.route('/api/product/<int:product_id>', methods=['GET'])
 def get_product_details(product_id):
-    print(f"####### ENDPOINT CALLED: /product/<int:product_id> on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/product/<int:product_id> on {datetime.now()}")
     response = requests.get(f"{WC_API_URL}/products/{product_id}",
                             auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET),
                             verify=False)
@@ -594,9 +591,9 @@ def get_product_details(product_id):
         return jsonify({'error': 'Failed to fetch product details'}), response.status_code
 
 
-@app.route('/product/<int:product_id>/details', methods=['GET'])
+@app.route('/api/product/<int:product_id>/details', methods=['GET'])
 def get_product_image_price(product_id):
-    print(f"####### ENDPOINT CALLED: /product/<int:product_id>/details on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/product/<int:product_id>/details on {datetime.now()}")
     response = requests.get(f"{WC_API_URL}/products/{product_id}",
                             auth=HTTPBasicAuth(CONSUMER_KEY, CONSUMER_SECRET), verify=False)
     if response.ok:
@@ -610,9 +607,9 @@ def get_product_image_price(product_id):
         return jsonify({'error': 'Failed to fetch product details'}), response.status_code
 
 
-@app.route('/product/<int:product_id>/update-price', methods=['POST'])
+@app.route('/api/product/<int:product_id>/update-price', methods=['POST'])
 def update_product_price(product_id):
-    print(f"####### ENDPOINT CALLED: /product/<int:product_id>/update-price on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/product/<int:product_id>/update-price on {datetime.now()}")
     new_price = request.json.get('price')
     if not new_price:
         return jsonify({'error': 'New price is required'}), 400
@@ -628,9 +625,9 @@ def update_product_price(product_id):
         return jsonify({'error': 'Failed to update product price'}), response.status_code
 
 
-@app.route('/product/<int:product_id>/update-image', methods=['POST'])
+@app.route('/api/product/<int:product_id>/update-image', methods=['POST'])
 def update_product_image(product_id):
-    print(f"####### ENDPOINT CALLED: /product/<int:product_id>/update-image on {datetime.now()}")
+    print(f"####### ENDPOINT CALLED: /api/product/<int:product_id>/update-image on {datetime.now()}")
     # Check if the post request has the file part
     if 'file' not in request.files:
         return jsonify({'error': 'No file part in the request'}), 400
@@ -684,13 +681,12 @@ def get_sort_asc_desc(my_request):
 
 # ===================== SocketIO event handlers =====================
 
-# @socketio.on('connect', namespace='/ws')  # TODO CHECK WS x WSS
-@socketio.on('connect')
+@socketio.on('connect', namespace='/ws')
 def connect():
     print("A client connected")
 
 
-@socketio.on('disconnect')
+@socketio.on('disconnect', namespace='/ws')
 def disconnect():
     print('Client disconnected')
 
