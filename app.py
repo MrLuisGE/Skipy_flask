@@ -27,7 +27,7 @@ cred = credentials.Certificate("/root/qjump-api/my-first-project-5e08d-firebase-
 firebase_admin.initialize_app(cred)
 
 # TODO WORDPRESS KEY: iQlvL@~CCb,TW)RJ47Vk3RW:+L1)FFIb6)BWjma-Gg+Qe%qC>X
-WC_API_URL = 'https://qjump.online/wp-json/wc/v3'
+WC_API_URL = 'https://skipy.online/wp-json/wc/v3'
 CONSUMER_KEY = 'ck_b6d4bab7af943dd44fab3902735281511151df20'
 CONSUMER_SECRET = 'cs_b70925c86fe66dcc3b24108104240ba829ee75b8'
 SEC_KEY = '27072001'
